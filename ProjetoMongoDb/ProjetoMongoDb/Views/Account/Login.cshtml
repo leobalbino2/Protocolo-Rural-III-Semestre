@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // tenta ler returnUrl da ViewData (se o controller passou) ou da querystring de forma segura
+    var returnUrl = ViewData["ReturnUrl"] as string;
+    if (string.IsNullOrEmpty(returnUrl))
+    {
+        var q = ViewContext?.HttpContext?.Request?.Query;
+        if (q != null && q.ContainsKey("returnUrl"))
+        {
+            returnUrl = q["returnUrl"].ToString();
+        }
+        else
+        {
+            returnUrl = "";
+        }
+    }
+}
+<!-- usar o mesmo css da página de cadastro para manter medidas/estilo -->
+<link rel="stylesheet" href="~/css/registration.css" asp-append-version="true" />
+
+<main>
+    <div class="container mt-5 pt-5">
+        <div class="form-box col-12 col-lg-6 mx-auto border p-4 bg-white">
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger text-center mb-3" role="alert">
+                    @TempData["Error"]
+                </div>
+            }
+
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success text-center mb-3" role="alert">
+                    @TempData["Message"]
+                </div>
+            }
+
+            @* mostra mensagens de validação do ModelState *@
+            <div asp-validation-summary="All" class="text-danger text-center mb-2"></div>
+
+            <form asp-controller="Account" asp-action="Login" method="post" class="col-11 mx-auto d-flex flex-column justify-content-center">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="returnUrl" value="@returnUrl" />
+
+                <div class="d-flex align-items-center mb-3">
+                    <img class="cursor-pointer d-none d-lg-block pe-auto btn-back"
+                         id="voltar"
+                         src="@Url.Content("~/imgs/seta.png")"
+                         alt="voltar"
+                         width="29"
+                         onclick="window.location.href='@Url.Action("Index", "Home")'" />
+                    <h5 class="fw-bold m-3 text-center flex-grow-1">Bem-vindo de volta!</h5>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="fw-bold txt-gray">E-mail</label>
+                    <input type="email"
+                           class="form-control"
+                           id="email"
+                           name="email"
+                           aria-describedby="emailHelp"
+                           placeholder="Insira seu e-mail"
+                           required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="fw-bold txt-gray">Senha</label>
+                    <input type="password"
+                           class="form-control"
+                           id="password"
+                           name="password"
+                           placeholder="Insira sua senha"
+                           required />
+                </div>
+
+                <button type="submit" class="btn btn-sbmt2 mb-2 mt-3 d-block mx-auto col-6">Entrar</button>
+
+                <p class="text-center txt-gray border-top mt-2 txt-gray2">ou</p>
+
+                <button type="button" class="btn btn-sbmt my-2 txt-gray2 w-100">Continuar com Google</button>
+
+                <a asp-controller="User" asp-action="Create" asp-route-role="usuario" class="btn btn-sbmt my-2 txt-gray2 text-center">Cadastrar-se</a>
+
+                <a asp-controller="Account" asp-action="ForgotPassword" class="btn btn-sbmt mt-2 mb-4 txt-gray2 text-center">Esqueci minha senha</a>
+            </form>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

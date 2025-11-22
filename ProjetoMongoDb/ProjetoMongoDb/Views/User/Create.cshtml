@@ -1,0 +1,94 @@
+﻿@model ProtocoloRural.Models.User
+@using System.Linq
+@{
+    ViewData["title"] = "Cadastro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- specific styles for this view -->
+<link rel="stylesheet" href="~/css/registration.css" asp-append-version="true" />
+
+<main>
+    <div class="container mt-5 pt-5">
+        <div class="form-box col-12 col-lg-6 mx-auto border p-4 bg-white">
+
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success text-center mb-3" role="alert">
+                    @ViewBag.Message
+                </div>
+            }
+
+            @{
+                var errors = ViewData.ModelState.Values
+                .SelectMany(v => v.Errors)
+                .Select(e => e.ErrorMessage)
+                .Where(msg => !string.IsNullOrWhiteSpace(msg))
+                .ToList();
+            }
+            @if (errors.Any())
+            {
+                <div class="alert alert-danger text-center mb-3" role="alert">
+                    <ul class="mb-0" style="list-style: none; padding-left: 0; margin: 0;">
+                        @foreach (var err in errors)
+                        {
+                            <li>@err</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <form asp-action="Create" method="post" class="col-11 mx-auto d-flex flex-column justify-content-center">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="role" value="@(ViewBag.Role ?? "usuario")" />
+
+                <div class="d-flex align-items-center mb-3">
+                    <img class="cursor-pointer d-none d-lg-block pe-auto btn-back"
+                         id="voltar"
+                         src="@(Url.Content("~/imgs/seta.png"))"
+                         alt="voltar"
+                         width="29"
+                         onclick="window.location.href='@(Url.Action("Index", "Home"))'" />
+                    <h5 class="fw-bold m-3 text-center flex-grow-1">Cadastre-se</h5>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="NomeCompleto" class="fw-bold txt-gray"></label>
+                    <input asp-for="NomeCompleto" class="form-control" autocomplete="name" placeholder="Informe seu nome" />
+                    <span asp-validation-for="NomeCompleto" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Celular" class="fw-bold txt-gray"></label>
+                    <input asp-for="Celular" type="tel" class="form-control" autocomplete="tel" placeholder="(xx) xxxxx-xxxx" />
+                    <span asp-validation-for="Celular" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="fw-bold txt-gray"></label>
+                    <input asp-for="Email" type="email" class="form-control" autocomplete="email" placeholder="Informe seu e-mail" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="fw-bold txt-gray"></label>
+                    <input asp-for="Password" type="password" class="form-control" autocomplete="new-password" placeholder="Crie uma senha forte" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-sbmt2 mb-2 mt-3 d-block mx-auto col-6">Cadastrar-se</button>
+
+                <p class="text-center txt-gray border-top mt-2 txt-gray2">ou</p>
+
+                <button type="button" class="btn btn-sbmt my-2 txt-gray2 w-100">Continuar com Google</button>
+
+                <a asp-controller="Account" asp-action="ForgotPassword" class="btn btn-sbmt mt-2 mb-4 txt-gray2 text-center">Esqueci minha senha</a>
+            </form>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

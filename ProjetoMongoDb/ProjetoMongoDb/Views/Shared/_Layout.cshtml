@@ -1,0 +1,153 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    string ActiveClass(string action, string controller = "Home")
+    {
+        return (string.Equals(currentAction, action, StringComparison.OrdinalIgnoreCase)
+                && string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase))
+            ? "green-actv pag-atual"
+            : "";
+    }
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Protocolo Rural</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/stylesheet.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProtocoloRural.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <!------------------------------------------- Cabeçalho ------------------------------------------->
+    <header>
+        <nav id="nav" class="navbar fixed-top min-vh-10 d-flex align-items-center fundo-header">
+            <div class="container">
+                <!------------------------------------------- Logo ------------------------------------------->
+                <div class="col-2 d-flex">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                        <img class="d-none d-lg-block mt-2" src="@Url.Content("~/imgs/logo.png")" alt="logo" width="225" height="32" />
+                        <img class="d-block d-lg-none" src="@Url.Content("~/imgs/logomobile.png")" alt="logo" width="30" height="32" />
+                    </a>
+                </div>
+
+                <!------------------------------------------- Menu Desktop ------------------------------------------->
+                <div class="col-8 d-none d-lg-block">
+                    <ul class="nav me-auto list-inline fs-5 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("Index", "Home") list-hvr" asp-controller="Home" asp-action="Index">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("Sobre", "Home") list-hvr" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("QuemSomos", "Home") list-hvr" asp-controller="Home" asp-action="QuemSomos">Quem somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("Contato", "Home") list-hvr" asp-controller="Home" asp-action="Contato">Contato</a>
+                        </li>
+
+                        <partial name="_LoginAdmin.cshtml" />
+                        @if (User?.Identity?.IsAuthenticated ?? false)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link mx-1.5 txt-gray @ActiveClass("Index", "Painel") list-hvr" asp-controller="Painel" asp-action="Index">Painel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-1.5 txt-gray @ActiveClass("ComoUsar", "Home") list-hvr" asp-controller="Home" asp-action="ComoUsar">Como usar</a>
+                            </li>
+
+                        }
+                    </ul>
+                </div>
+
+                <!------------------------------------------- Login / Perfil Desktop ------------------------------------------->
+                <div class="fs-5 col-2 d-none d-lg-flex justify-content-end align-items-center">
+                    @if (User?.Identity?.IsAuthenticated ?? false)
+                    {
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link ms-2 py-2 px-3 txt-green border green-hvr" asp-controller="Account" asp-action="Logout">Minha Conta</a>
+                            <a class="nav-link ms-2 py-2 px-3 txt-green border green-hvr" asp-controller="Account" asp-action="Logout">Sair</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div>
+                            <a class="nav-link ms-2 py-2 px-3 txt-green border green-hvr" asp-controller="Account" asp-action="Login">Acessar</a>
+                        </div>
+                    }
+                </div>
+
+                <!--------------------------------------- Menu Mobile (Hamburger) --------------------------------------->
+                <div class="d-lg-none">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!----------------------------------- Conteúdo Colapsável Mobile ----------------------------------->
+            <div class="col-12 collapse text-center d-lg-none" id="navbarToggleExternalContent">
+                <div id="overlay" class="p-4">
+                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="Index"><h1>Início</h1></a>
+                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="Sobre"><h1>Sobre</h1></a>
+                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="QuemSomos"><h1>Quem somos</h1></a>
+                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="Contato"><h1>Contato</h1></a>
+
+                    @if (User?.Identity?.IsAuthenticated ?? false)
+                    {
+                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Painel" asp-action="Index"><h1>Painel</h1></a>
+                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="ComoUsar"><h1>Como usar</h1></a>
+                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Account" asp-action="Logout"><h1>Sair</h1></a>
+                    }
+                    else
+                    {
+                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Account" asp-action="Login"><h1>Acessar</h1></a>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="row-5 mt-5">
+        <div class="p-5">
+            <ul class="nav me-auto list-inline fs-5 justify-content-center rodape-menu">
+                <li class="nav-item mx-2">
+                    <a asp-controller="Home" asp-action="Index" class="txt-white text-decoration-none font-weight-normal">Início</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a asp-controller="Home" asp-action="Sobre" class="txt-white text-decoration-none font-weight-normal">Sobre</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a asp-controller="Home" asp-action="QuemSomos" class="txt-white text-decoration-none font-weight-normal">Quem somos</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a asp-controller="Home" asp-action="Contato" class="txt-white text-decoration-none font-weight-normal">Contato</a>
+                </li>
+            </ul>
+        </div>
+        <a asp-controller="Home" asp-action="Index">
+            <img src="~/imgs/logo2.png"
+                 alt="logo"
+                 width="200"
+                 class="mx-auto d-block pb-5" />
+        </a>
+
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
