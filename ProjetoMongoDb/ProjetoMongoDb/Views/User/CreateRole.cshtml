@@ -3,33 +3,34 @@
     ViewData["title"] = "Criar Função";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
-<h1>Create</h1>
-<h4>Role</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        @if (ViewBag.Message != null)
-        {
-            <div class="p-1 mb-2 bg-success text-dark">
-                @ViewBag.Message;
-            </div>
-        }
-        <form asp-action="CreateRole">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="RoleName" class="control-label"></label>
-                <input asp-for="RoleName" class="form-control" />
-                <span asp-validation-for="RoleName" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
 
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+<main>
+    <div class="container mt-5 pt-5">
+        <div class="form-box col-12 col-lg-6 mx-auto border p-4 bg-white">
 
+            <div class="d-flex align-items-center mb-3">
+                <h5 class="fw-bold m-3 text-center flex-grow-1">Cadastro de função</h5>
             </div>
-        </form>
+
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success text-center mb-3" role="alert">
+                    @ViewBag.Message
+                </div>
+            }
+            <form asp-action="CreateRole" class="col-11 mx-auto d-flex flex-column justify-content-center">
+                <div asp-validation-summary="ModelOnly" class="text-danger text-center mb-2"></div>
+                <div class="mb-3">
+                    <label asp-for="RoleName" class="fw-bold txt-gray">Nome da função</label>
+                    <input asp-for="RoleName" class="form-control" placeholder="Insira o nome da função" />
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-sbmt2 mb-2 mt-3 d-block mx-auto col-6">Cadastrar</button>
+            </form>
+        </div>
     </div>
-</div>
+</main>
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

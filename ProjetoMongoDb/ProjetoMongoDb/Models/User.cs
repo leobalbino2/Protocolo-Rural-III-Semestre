@@ -1,9 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace ProtocoloRural.Models
 {
+    [BsonIgnoreExtraElements]
     public class User
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
         [Required(ErrorMessage = "O nome completo é obrigatório.")]
         [Display(Name = "Nome Completo")]
         public string NomeCompleto { get; set; }
@@ -17,7 +24,6 @@ namespace ProtocoloRural.Models
         [Display(Name = "Senha")]
         [DataType(DataType.Password)]
         [StringLength(100, MinimumLength = 6, ErrorMessage = "A senha deve ter entre {2} e {1} caracteres.")]
-        // Regex: pelo menos 1 minúscula, 1 maiúscula, 1 dígito e 1 caractere não alfanumérico
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).+$",
             ErrorMessage = "A senha deve conter ao menos uma letra maiúscula, uma minúscula, um número e um caractere especial.")]
         public string Password { get; set; }

@@ -2,7 +2,6 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-    // tenta ler returnUrl da ViewData (se o controller passou) ou da querystring de forma segura
     var returnUrl = ViewData["ReturnUrl"] as string;
     if (string.IsNullOrEmpty(returnUrl))
     {
@@ -17,8 +16,6 @@
         }
     }
 }
-<!-- usar o mesmo css da página de cadastro para manter medidas/estilo -->
-<link rel="stylesheet" href="~/css/registration.css" asp-append-version="true" />
 
 <main>
     <div class="container mt-5 pt-5">

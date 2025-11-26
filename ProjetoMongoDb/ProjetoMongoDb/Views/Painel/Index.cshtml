@@ -1,5 +1,120 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ProtocoloRural.ViewModels.PainelViewModel
 @{
+    ViewData["Title"] = "Painel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<main>
+    <div class="container mt-5 pt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="brdr-bottom3 py-3 mb-0">Painel de Avaliações</h1>
+            <button class="btn btn-sbmt2 ms-2" data-bs-toggle="modal" data-bs-target="#criarAvaliacao">
+                <img src="~/imgs/add.png" alt="Adicionar" style="width:22px;height:22px;">
+            </button>
+        </div>
+
+        <!-- Mensagem -->
+        @if (!string.IsNullOrEmpty(Model?.Mensagem))
+        {
+            <div class="alert alert-success alert-dismissible fade show my-3" role="alert">
+                <strong><i class="bi bi-check-circle-fill me-1"></i></strong> @Model.Mensagem
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+            </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead class="fundo-tabela">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Estado</th>
+                        <th>Grau de Sustentabilidade</th>
+                        <th class="text-end" style="width: 195px;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model?.Avaliacoes != null && Model.Avaliacoes.Any())
+                    {
+                        foreach (var avaliacao in Model.Avaliacoes)
+                        {
+                            <tr>
+                                <td>@avaliacao.NomePropriedade</td>
+                                <td>@(avaliacao.Finalizado ? "Finalizado" : "Em Andamento")</td>
+                                <td>@($"{avaliacao.GrauPorcentagem:0.00}%")</td>
+                                <td class="text-end align-middle">
+                                    <div class="d-flex gap-2 justify-content-end align-items-center">
+                                        @if (avaliacao.Finalizado)
+                                        {
+                                            <!-- Ver Resultados -->
+                                            <a href="@Url.Action("Resultado", new { id = avaliacao.Id })"
+                                               class="btn btn-sm btn-outline-primary"
+                                               title="Ver Resultados">
+                                                <img src="~/imgs/ver.png" alt="Ver Resultados" style="width:20px;height:20px;">
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <!-- Realizar Avaliação -->
+                                            <a href="@Url.Action("Index", "Avaliacao", new { id = avaliacao.Id })"
+                                               class="btn btn-sm btn-outline-success"
+                                               title="Realizar Avaliação">
+                                                <img src="~/imgs/realizar.png" alt="Realizar Avaliação" style="width:20px;height:20px;">
+                                            </a>
+                                        }
+                                        <!-- Remover SEMPRE -->
+                                        <form method="post" asp-action="RemoverAvaliacao"
+                                              style="display:inline;"
+                                              onsubmit="return confirm('Deseja realmente remover esta avaliação?');">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@avaliacao.Id" />
+                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="Remover">
+                                                <img src="~/imgs/delete.png" alt="Remover" style="width:20px;height:20px;">
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center">Nenhuma avaliação encontrada.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<!-- Modal Criar Avaliação -->
+<div class="modal fade" id="criarAvaliacao" tabindex="-1" aria-labelledby="criarAvaliacaoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" asp-action="CriarAvaliacao">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="criarAvaliacaoLabel">
+                        Criar Avaliação
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nomeAvaliacao" class="form-label">Nome da Propriedade</label>
+                        <input type="text" class="form-control" id="nomeAvaliacao" name="nome_propriedade" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-sbmt2">
+                        Salvar Avaliação
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

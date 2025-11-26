@@ -1,68 +1,284 @@
-﻿@{
+﻿@using System.Linq
+@model IEnumerable<ProtocoloRural.Models.Indicador>
+@{
     ViewData["Title"] = "Indicadores";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@if (TempData["Error"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["Error"]
-    </div>
-}
-
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["Message"]
-    </div>
 }
 
 <main>
-    <div class="container mt-5 pt-5 pb-5">
-        <div class="d-flex justify-content-between align-items-center">
-            <h1 class="pb-2 mt-4">Gestão de Indicadores</h1>
-            <a class="btn btn-sbmt2" data-bs-toggle="modal" data-bs-target="#criarIndicador">Criar Novo Indicador</a>
+    <div class="container mt-5 pt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="brdr-bottom3 py-3 mb-0">Gestão de Indicadores</h1>
+            <button class="btn btn-sbmt2 ms-2" data-bs-toggle="modal" data-bs-target="#criarIndicador">
+                <img src="~/imgs/add.png" alt="Adicionar" style="width:22px;height:22px;">
+            </button>
         </div>
 
+        <!-- Mensagem -->
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show my-3" role="alert">
+                <strong><i class="bi bi-exclamation-circle-fill me-1"></i></strong> @TempData["Error"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+            </div>
+        }
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show my-3" role="alert">
+                <strong><i class="bi bi-check-circle-fill me-1"></i></strong> @TempData["Message"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+            </div>
+        }
+
         <div class="table-responsive">
-            <table class="table">
+            <table class="table align-middle">
                 <thead class="fundo-tabela">
                     <tr>
-                        <th colspan="3"><h4 class="mb-0">Nome</h4></th>
-                        <th><h4 class="mb-0">Estado</h4></th>
-                        <th colspan="8"><h4 class="mb-0">Descrição</h4></th>
-                        <th></th>
+                        <th>Nome</th>
+                        <th>Habilitado</th>
+                        <th class="text-end" style="width: 195px;">Ações</th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider border-top-0">
-                    <tr>
-                        <td colspan="12" class="text-center"><p class="my-2">Nenhum indicador encontrado.</p></td>
-                    </tr>
-
-                    <!--
-                    <tr>
-                      <td colspan="3"><p class="my-2">Indicador Exemplo</p></td>
-                      <td><p class="my-2">Ativo</p></td>
-                      <td colspan="5"><p class="my-2">Descrição curta do indicador de exemplo.</p></td>
-                      <td class="text-end align-middle" colspan="1" style="white-space: normal;">
-                        <div class="mb-1">
-                          <a href="#" class="btn btn-sbmt2 w-100">Ver</a>
-                        </div>
-                        <div class="mb-1">
-                          <a href="#" class="btn btn-sbmt4 w-100">Alterar</a>
-                        </div>
-                        <div>
-                          <button type="button" class="btn btn-sbmt3 w-100" onclick="if(confirm('Deseja realmente remover este indicador?')){ /* ação */ }">Remover</button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    -->
+                <tbody>
+                    @if (Model == null || !Model.Any())
+                    {
+                        <tr><td colspan="3" class="text-center">Nenhum indicador encontrado.</td></tr>
+                    }
+                    else
+                    {
+                        foreach (var i in Model)
+                        {
+                            <tr class="@(i.Estado ? "" : "text-muted")">
+                                <td>@i.Nome</td>
+                                <td>@(i.Estado ? "Sim" : "Não")</td>
+                                <td class="text-end">
+                                    <div class="d-flex flex-wrap gap-2 justify-content-end">
+                                        <!-- Botão Ver -->
+                                        <button class="btn btn-sm btn-outline-primary"
+                                                title="Ver"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#verIndicador_@i.Id">
+                                            <img src="~/imgs/ver.png" alt="Ver" style="width:20px;height:20px;">
+                                        </button>
+                                        <!-- Botão Alterar -->
+                                        <button class="btn btn-sm btn-outline-warning"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#editarIndicador_@i.Id"
+                                                title="Alterar">
+                                            <img src="~/imgs/edit.png" alt="Alterar" style="width:20px;height:20px;">
+                                        </button>
+                                        <!-- Botão Ativar/Desativar -->
+                                        <form asp-action="Toggle" asp-route-id="@i.Id" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-sm btn-outline-info" title="@(i.Estado ? "Desativar" : "Ativar")">
+                                                @if (i.Estado)
+                                                {
+                                                    <img src="~/imgs/off.png" alt="Desativar" style="width:20px;height:20px;">
+                                                }
+                                                else
+                                                {
+                                                    <img src="~/imgs/on.png" alt="Ativar" style="width:20px;height:20px;">
+                                                }
+                                            </button>
+                                        </form>
+                                        <!-- Botão Remover -->
+                                        <form asp-action="Delete" asp-route-id="@i.Id" method="post" class="d-inline"
+                                              onsubmit="return confirm('Deseja realmente remover este indicador?');">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="Remover">
+                                                <img src="~/imgs/delete.png" alt="Remover" style="width:20px;height:20px;">
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>
 
-        <div style="height: 15vh"></div>
-    </div>
+        <!-- ===== MODAIS INDIVIDUAIS FORA DA TABELA! ===== -->
+        @if (Model != null)
+        {
+            foreach (var i in Model)
+            {
+                <!-- Modal Ver Indicador -->
+                <div class="modal fade" id="verIndicador_@i.Id" tabindex="-1" aria-labelledby="verIndicadorLabel_@i.Id" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-light">
+                                <h5 class="modal-title" id="verIndicadorLabel_@i.Id">
+                                    <img src="~/imgs/ver.png" alt="Ver" style="width:22px;height:22px;" class="me-2" />
+                                    Detalhes do Indicador
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item">
+                                        <span class="fw-bold text-secondary">Nome:</span>
+                                        <span class="ms-2">@i.Nome</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="fw-bold text-secondary">Descrição:</span>
+                                        <span class="ms-2">
+                                            @if (!string.IsNullOrWhiteSpace(i.Descricao))
+                                            {
+                                                @i.Descricao
+                                            }
+                                            else
+                                            {
+                                                <em>Sem descrição</em>
+                                            }
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="fw-bold text-secondary">Habilitado:</span>
+                                        <span class="ms-2">@((i.Estado ? "Sim" : "Não"))</span>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <h6 class="mb-2 text-success">Parâmetros</h6>
+                                    <ul class="list-group">
+                                        @if (i.Parametros != null && i.Parametros.Any())
+                                        {
+                                            foreach (var p in i.Parametros)
+                                            {
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span class="fw-bold text-secondary text-nowrap">Valor @p.Valor</span>
+                                                    <span class="ms-3 flex-fill">@p.Texto</span>
+                                                </li>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <li class="list-group-item text-muted fst-italic">Nenhum parâmetro definido.</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer bg-light">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                    <img src="~/imgs/delete.png" alt="Fechar" style="width:22px;height:22px;" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Modal Editar Indicador -->
+                <div class="modal fade" id="editarIndicador_@i.Id" tabindex="-1" aria-labelledby="editarIndicadorLabel_@i.Id" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <form asp-action="Edit" asp-route-id="@i.Id" method="post">
+                                @Html.AntiForgeryToken()
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editarIndicadorLabel_@i.Id">
+                                        <img src="~/imgs/edit.png" alt="Alterar" style="width:22px;height:22px;" class="me-2" />
+                                        Editar Indicador
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="nomeIndicadorEdit_@i.Id" class="form-label">Nome do Indicador</label>
+                                        <input type="text" class="form-control" id="nomeIndicadorEdit_@i.Id" name="Nome" value="@i.Nome" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Parâmetros (mínimo 2, máximo 6 respostas)</label>
+                                        <div class="row">
+                                            @for (int idx = 0; idx < 6; idx++)
+                                            {
+                                                var parametro = (i.Parametros != null && i.Parametros.Count > idx)
+                                                ? i.Parametros[idx]
+                                                : new ProtocoloRural.Models.Parametro { Valor = idx, Texto = "" };
+                                                <div class="col-md-6 mb-2">
+                                                    <input type="hidden" name="Parametros[@idx].Valor" value="@idx" />
+                                                    <input type="text" name="Parametros[@idx].Texto" class="form-control"
+                                                           value="@parametro.Texto"
+                                                           @(idx < 2 ? "required" : "") />
+                                                </div>
+                                            }
+                                        </div>
+                                        <small class="text-muted">
+                                            Preencha ao menos 2 parâmetros (primeiros campos são obrigatórios).
+                                            Os demais campos são opcionais.
+                                        </small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="descricaoIndicadorEdit_@i.Id" class="form-label">Descrição (opcional)</label>
+                                        <textarea id="descricaoIndicadorEdit_@i.Id" name="Descricao" class="form-control" rows="3">@i.Descricao</textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        <img src="~/imgs/delete.png" alt="Fechar" style="width:22px;height:22px;" />
+                                    </button>
+                                    <button type="submit" class="btn btn-sbmt2">
+                                        <img src="~/imgs/add.png" alt="Salvar" style="width:22px;height:22px;" />
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        <!-- FIM MODAIS INDIVIDUAIS -->
+    </div>
 </main>
+
+<!-- Modal Criar Indicador -->
+<div class="modal fade" id="criarIndicador" tabindex="-1" aria-labelledby="criarIndicadorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="criarIndicadorLabel">
+                        <img src="~/imgs/add.png" alt="Adicionar" style="width:22px;height:22px;" class="me-2" />
+                        Criar Indicador
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nomeIndicador" class="form-label">Nome do Indicador</label>
+                        <input type="text" class="form-control" id="nomeIndicador" name="Nome" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Parâmetros (mínimo 2, máximo 6 respostas)</label>
+                        <div class="row">
+                            @for (int idx = 0; idx < 6; idx++)
+                            {
+                                <div class="col-md-6 mb-2">
+                                    <input type="hidden" name="Parametros[@idx].Valor" value="@idx" />
+                                    <input type="text" name="Parametros[@idx].Texto"
+                                           class="form-control"
+                                           placeholder="Texto da resposta (valor @idx)"
+                                           @(idx < 2 ? "required" : "") />
+                                </div>
+                            }
+                        </div>
+                        <small class="text-muted">
+                            Preencha ao menos 2 parâmetros (primeiros campos são obrigatórios).
+                            Os demais campos são opcionais.
+                        </small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descricaoIndicador" class="form-label">Descrição (opcional)</label>
+                        <textarea id="descricaoIndicador" name="Descricao" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <img src="~/imgs/delete.png" alt="Fechar" style="width:22px;height:22px;" />
+                    </button>
+                    <button type="submit" class="btn btn-sbmt2">
+                        <img src="~/imgs/add.png" alt="Salvar" style="width:22px;height:22px;" />
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

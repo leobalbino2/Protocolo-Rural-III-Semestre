@@ -1,10 +1,13 @@
 wwwroot\css\stylesheet.css
 wwwroot\favicon.ico
 wwwroot\favicon.png
+wwwroot\imgs\add.png
 wwwroot\imgs\cardfundo1.png
 wwwroot\imgs\cardfundo2.png
 wwwroot\imgs\cardfundo3.png
+wwwroot\imgs\delete.png
 wwwroot\imgs\dev.png
+wwwroot\imgs\edit.png
 wwwroot\imgs\fundo.png
 wwwroot\imgs\icone1.png
 wwwroot\imgs\icone2.png
@@ -14,7 +17,11 @@ wwwroot\imgs\logo2.png
 wwwroot\imgs\logo3.png
 wwwroot\imgs\logomobile.png
 wwwroot\imgs\msgimg.png
+wwwroot\imgs\off.png
+wwwroot\imgs\on.png
+wwwroot\imgs\realizar.png
 wwwroot\imgs\seta.png
+wwwroot\imgs\ver.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map

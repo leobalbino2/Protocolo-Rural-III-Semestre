@@ -18,19 +18,19 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpGet("sobre")]
+    [HttpGet("Sobre")]
     public IActionResult Sobre()
     {
         return View();
     }
 
-    [HttpGet("quemsomos")]
+    [HttpGet("Quemsomos")]
     public IActionResult QuemSomos()
     {
         return View();
     }
 
-    [HttpGet("contato")]
+    [HttpGet("Contato")]
     public IActionResult Contato()
     {
         return View();

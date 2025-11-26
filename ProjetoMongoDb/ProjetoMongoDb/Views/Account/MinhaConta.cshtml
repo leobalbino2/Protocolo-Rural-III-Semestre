@@ -1,0 +1,158 @@
+﻿@model ProtocoloRural.ViewModels.MinhaContaViewModel
+@{
+    ViewData["Title"] = "Minha Conta";
+}
+
+<main>
+    <div class="container mt-5 pt-5 pb-5">
+        <h3 class="pb-2 mt-4">Minha Conta</h3>
+        <div class="borda-verde"></div>
+
+        @if (!string.IsNullOrEmpty(Model.Mensagem) || TempData["Message"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                <strong><i class="bi bi-check-circle-fill me-1"></i></strong> @(Model.Mensagem ?? TempData["Message"])
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+            </div>
+        }
+
+
+        <!-- Formulário de perfil - Nome -->
+        <div>
+            <div class="mb-3">
+                <div class="mb-2 d-flex align-items-center">
+                    <i class="bi bi-person-circle fs-4 me-2 text-success"></i>
+                    <span class="fs-5 fw-semibold">@Model.NomeCompleto</span>
+                </div>
+                <p class="text-muted">Esta é a sua identificação principal na plataforma.Use os menus abaixo para alterar seu telefone, email ou senha.</p>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <!-- Alterar E-mail -->
+            <div class="col-md-4 mb-3">
+                <div class="accordion accordion-flush" id="accordionEmail">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEmail">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseEmail"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseEmail">
+                                Alterar E-mail
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEmail" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionEmail">
+                            <div class="accordion-body">
+                                <form asp-action="AlterarEmail" method="post" autocomplete="off">
+                                    <div class="mb-3">
+                                        <label for="NovoEmail" class="form-label">Novo E-mail</label>
+                                        <input type="email" class="form-control" id="NovoEmail" name="NovoEmail" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ConfirmarEmail" class="form-label">Confirmar Novo E-mail</label>
+                                        <input type="email" class="form-control" id="ConfirmarEmail" name="ConfirmarEmail" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-sbmt2">Alterar E-mail</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alterar Telefone -->
+            <div class="col-md-4 mb-3">
+                <div class="accordion accordion-flush" id="accordionTelefone">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTelefone">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTelefone"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseTelefone">
+                                Alterar Telefone
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTelefone" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionTelefone">
+                            <div class="accordion-body">
+                                <form asp-action="AlterarTelefone" method="post" autocomplete="off">
+                                    <div class="mb-3">
+                                        <label for="NovoTelefone" class="form-label">Novo Telefone</label>
+                                        <input type="text" class="form-control" id="NovoTelefone" name="NovoTelefone" maxlength="20" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ConfirmarTelefone" class="form-label">Confirmar Novo Telefone</label>
+                                        <input type="text" class="form-control" id="ConfirmarTelefone" name="ConfirmarTelefone" maxlength="20" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-sbmt2">Alterar Telefone</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alterar Senha -->
+            <div class="col-md-4 mb-3">
+                <div class="accordion accordion-flush" id="accordionSenha">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSenha">
+                            <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseSenha"
+                                    aria-expanded="false"
+                                    aria-controls="flush-collapseSenha">
+                                Alterar Senha
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSenha" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionSenha">
+                            <div class="accordion-body">
+                                <form asp-action="AlterarSenha" method="post" autocomplete="off">
+                                    <div class="mb-3">
+                                        <label for="SenhaAtual" class="form-label">Senha Atual</label>
+                                        <input type="password" class="form-control" id="SenhaAtual" name="SenhaAtual" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="NovaSenha" class="form-label">Nova Senha</label>
+                                        <input type="password" class="form-control" id="NovaSenha" name="NovaSenha" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ConfirmarSenha" class="form-label">Confirmar Nova Senha</label>
+                                        <input type="password" class="form-control" id="ConfirmarSenha" name="ConfirmarSenha" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-sbmt2">Alterar Senha</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <!-- Apagar Conta -->
+        <h5 class="pb-2 mt-4">Apagar Conta</h5>
+        <p>
+            Esta ação é irreversível. Ao prosseguir, todos os dados associados às
+            suas avaliações e informações pessoais serão excluídos de forma
+            permanente e não poderão ser recuperados. Recomendamos que revise sua
+            decisão antes de confirmar.
+        </p>
+        <form asp-action="ExcluirConta" method="post" class="mt-3">
+            <button type="submit" class="btn btn-sbmt3"
+                    onclick="return confirm('Deseja realmente apagar sua conta? Esta ação não pode ser desfeita.')">
+                Apagar Conta
+            </button>
+        </form>
+    </div>
+</main>

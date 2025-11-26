@@ -1,15 +1,23 @@
 ﻿@using Microsoft.AspNetCore.Http
+
 @{
     var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+
     string ActiveClass(string action, string controller = "Home")
     {
-        return (string.Equals(currentAction, action, StringComparison.OrdinalIgnoreCase)
-                && string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase))
-            ? "green-actv pag-atual"
-            : "";
+        if (string.Equals(currentAction, action, StringComparison.OrdinalIgnoreCase)
+            && string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase))
+        {
+            if (action == "MinhaConta" && controller == "Account")
+                return "green-act";
+            else
+                return "green-actv pag-atual";
+        }
+        return "";
     }
 }
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Protocolo Rural</title>
     <link rel="icon" type="image/x-icon" href="~/favicon.png" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/stylesheet.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProtocoloRural.styles.css" asp-append-version="true" />
@@ -30,7 +38,7 @@
                 <!------------------------------------------- Logo ------------------------------------------->
                 <div class="col-2 d-flex">
                     <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                        <img class="d-none d-lg-block mt-2" src="@Url.Content("~/imgs/logo.png")" alt="logo" width="225" height="32" />
+                        <img class="d-none d-lg-block mt-2" src="@Url.Content("~/imgs/logo.png")" alt="logo" width="170" />
                         <img class="d-block d-lg-none" src="@Url.Content("~/imgs/logomobile.png")" alt="logo" width="30" height="32" />
                     </a>
                 </div>
@@ -39,28 +47,35 @@
                 <div class="col-8 d-none d-lg-block">
                     <ul class="nav me-auto list-inline fs-5 justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("Index", "Home") list-hvr" asp-controller="Home" asp-action="Index">Início</a>
+                            <a class="nav-link mx-1.5 txt-gray @(ActiveClass("Index", "Home")) list-hvr" asp-controller="Home" asp-action="Index">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("Sobre", "Home") list-hvr" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                            <a class="nav-link mx-1.5 txt-gray @(ActiveClass("Sobre", "Home")) list-hvr" asp-controller="Home" asp-action="Sobre">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("QuemSomos", "Home") list-hvr" asp-controller="Home" asp-action="QuemSomos">Quem somos</a>
+                            <a class="nav-link mx-1.5 txt-gray @(ActiveClass("QuemSomos", "Home")) list-hvr" asp-controller="Home" asp-action="QuemSomos">Quem somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-1.5 txt-gray @ActiveClass("Contato", "Home") list-hvr" asp-controller="Home" asp-action="Contato">Contato</a>
+                            <a class="nav-link mx-1.5 txt-gray @(ActiveClass("Contato", "Home")) list-hvr" asp-controller="Home" asp-action="Contato">Contato</a>
                         </li>
 
-                        <partial name="_LoginAdmin.cshtml" />
+                        @* Links para usuários autenticados *@
                         @if (User?.Identity?.IsAuthenticated ?? false)
                         {
                             <li class="nav-item">
-                                <a class="nav-link mx-1.5 txt-gray @ActiveClass("Index", "Painel") list-hvr" asp-controller="Painel" asp-action="Index">Painel</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mx-1.5 txt-gray @ActiveClass("ComoUsar", "Home") list-hvr" asp-controller="Home" asp-action="ComoUsar">Como usar</a>
+                                <a class="nav-link mx-1.5 txt-gray @(ActiveClass("Index", "Painel")) list-hvr" asp-controller="Painel" asp-action="Index">Painel</a>
                             </li>
 
+                            @* Links exclusivos para administradores *@
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link mx-1.5 txt-gray @(ActiveClass("Index", "Indicadores")) list-hvr" asp-controller="Indicadores" asp-action="Index">Indicadores</a>
+                                </li>
+                                @*<li class="nav-item">
+                                    <a class="nav-link mx-1.5 txt-gray @(ActiveClass("CreateRole", "User")) list-hvr" asp-controller="User" asp-action="CreateRole">Funções</a>
+                                </li>*@
+                            }
                         }
                     </ul>
                 </div>
@@ -70,7 +85,7 @@
                     @if (User?.Identity?.IsAuthenticated ?? false)
                     {
                         <div class="d-flex align-items-center">
-                            <a class="nav-link ms-2 py-2 px-3 txt-green border green-hvr" asp-controller="Account" asp-action="Logout">Minha Conta</a>
+                                <a class="nav-link ms-2 py-2 px-3 txt-green border @(ActiveClass("MinhaConta", "Account")) green-hvr" asp-controller="Account" asp-action="MinhaConta">Minha Conta</a>
                             <a class="nav-link ms-2 py-2 px-3 txt-green border green-hvr" asp-controller="Account" asp-action="Logout">Sair</a>
                         </div>
                     }
@@ -92,21 +107,25 @@
 
             <!----------------------------------- Conteúdo Colapsável Mobile ----------------------------------->
             <div class="col-12 collapse text-center d-lg-none" id="navbarToggleExternalContent">
-                <div id="overlay" class="p-4">
-                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="Index"><h1>Início</h1></a>
-                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="Sobre"><h1>Sobre</h1></a>
-                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="QuemSomos"><h1>Quem somos</h1></a>
-                    <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="Contato"><h1>Contato</h1></a>
+                <div id="overlay" class="p-4 d-flex flex-column gap-3">
+                    <a class="txt-green text-decoration-none" asp-controller="Home" asp-action="Index"><h1>Início</h1></a>
+                    <a class="txt-green text-decoration-none" asp-controller="Home" asp-action="Sobre"><h1>Sobre</h1></a>
+                    <a class="txt-green text-decoration-none" asp-controller="Home" asp-action="QuemSomos"><h1>Quem somos</h1></a>
+                    <a class="txt-green text-decoration-none" asp-controller="Home" asp-action="Contato"><h1>Contato</h1></a>
 
                     @if (User?.Identity?.IsAuthenticated ?? false)
                     {
-                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Painel" asp-action="Index"><h1>Painel</h1></a>
-                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Home" asp-action="ComoUsar"><h1>Como usar</h1></a>
-                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Account" asp-action="Logout"><h1>Sair</h1></a>
+                        <a class="txt-green text-decoration-none" asp-controller="Account" asp-action="MinhaConta"><h1>Minha Conta</h1></a>
+                        <a class="txt-green text-decoration-none" asp-controller="Painel" asp-action="Index"><h1>Painel</h1></a>
+                        @if (User.IsInRole("Administrador"))
+                        {
+                            <a class="txt-green text-decoration-none" asp-controller="Indicadores" asp-action="Index"><h1>Indicadores</h1></a>
+                        }
+                        <a class="txt-green text-decoration-none" asp-controller="Account" asp-action="Logout"><h1>Sair</h1></a>
                     }
                     else
                     {
-                        <a class="txt-green text-decoration-none rodape-p" asp-controller="Account" asp-action="Login"><h1>Acessar</h1></a>
+                        <a class="txt-green text-decoration-none" asp-controller="Account" asp-action="Login"><h1>Acessar</h1></a>
                     }
                 </div>
             </div>
@@ -119,34 +138,50 @@
         </main>
     </div>
 
-    <footer class="row-5 mt-5">
-        <div class="p-5">
-            <ul class="nav me-auto list-inline fs-5 justify-content-center rodape-menu">
-                <li class="nav-item mx-2">
-                    <a asp-controller="Home" asp-action="Index" class="txt-white text-decoration-none font-weight-normal">Início</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a asp-controller="Home" asp-action="Sobre" class="txt-white text-decoration-none font-weight-normal">Sobre</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a asp-controller="Home" asp-action="QuemSomos" class="txt-white text-decoration-none font-weight-normal">Quem somos</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a asp-controller="Home" asp-action="Contato" class="txt-white text-decoration-none font-weight-normal">Contato</a>
-                </li>
-            </ul>
-        </div>
-        <a asp-controller="Home" asp-action="Index">
-            <img src="~/imgs/logo2.png"
-                 alt="logo"
-                 width="200"
-                 class="mx-auto d-block pb-5" />
-        </a>
+    <footer class="py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
 
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="/" class="d-inline-block mb-2">
+                        <img src="~/imgs/logo2.png"
+                             alt="Logo Protocolo Rural"
+                             width="140"
+                             class="img-fluid" />
+                    </a>
+                    <div class="small txt-white">© 2025 - Todos os direitos reservados</div>
+                </div>
+
+                <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <ul class="nav flex-column flex-md-row text-center">
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link txt-white rodape-p">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Sobre" class="nav-link txt-white rodape-p">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="QuemSomos" class="nav-link txt-white rodape-p">Quem somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Contato" class="nav-link txt-white rodape-p">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <div class="mb-2">
+                        <span class="fw-semibold txt-white">Meios de comunicação:</span>
+                    </div>
+                    <a href="mailto:ProtocoloRural@gmail.com" class="text-light text-decoration-none small"> ProtocoloRural@gmail.com </a>
+                </div>
+
+            </div>
+        </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="@(Url.Content("~/lib/jquery/dist/jquery.min.js"))"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
