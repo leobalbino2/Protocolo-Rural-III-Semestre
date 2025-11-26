@@ -46,7 +46,7 @@
                                         @if (avaliacao.Finalizado)
                                         {
                                             <!-- Ver Resultados -->
-                                            <a href="@Url.Action("Resultado", new { id = avaliacao.Id })"
+                                            <a href="@Url.Action("Index", "Resultados", new { id = avaliacao.Id })"
                                                class="btn btn-sm btn-outline-primary"
                                                title="Ver Resultados">
                                                 <img src="~/imgs/ver.png" alt="Ver Resultados" style="width:20px;height:20px;">

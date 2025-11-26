@@ -22,6 +22,7 @@ wwwroot\imgs\on.png
 wwwroot\imgs\realizar.png
 wwwroot\imgs\seta.png
 wwwroot\imgs\ver.png
+wwwroot\js\grafico_sustentabilidade.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -82,3 +83,4 @@ wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
 wwwroot\Rotativa\wkhtmltopdf.exe
 wwwroot\Rotativa\wkhtmltox.dll
+wwwroot\js\grafico_parametro.js

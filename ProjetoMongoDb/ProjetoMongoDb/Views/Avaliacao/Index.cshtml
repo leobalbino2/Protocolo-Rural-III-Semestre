@@ -1,11 +1,194 @@
-﻿@model ProtocoloRural.Models.Avaliacao
+﻿@model ProtocoloRural.ViewModels.AvaliacaoViewModel
 @{
     ViewData["Title"] = "Avaliação";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-5 pt-5">
-    <h1>Realizar Avaliação (view temporária)</h1>
-    <p>Aqui você irá montar o formulário real para responder à avaliação.</p>
-    <p>Id da avaliação: @ViewBag.Id (ou @Model.Id se passar o modelo!)</p>
-</div>
+@if (ViewBag.IndicadoresError != null)
+{
+    <div class="alert alert-danger">
+        Erro ao carregar indicadores: @ViewBag.IndicadoresError
+    </div>
+}
+else
+{
+    <div class="mb-2">
+        <small>Indicadores carregados: @ViewBag.IndicadoresCount</small>
+        <small class="ms-3">@ViewBag.DebugDb</small>
+    </div>
+}
+
+<main>
+    <div class="container mt-5 pt-5">
+        <div class="d-flex">
+            <img class="cursor-pointer d-none d-lg-block pe-auto"
+                 src="~/imgs/seta.png"
+                 alt="voltar"
+                 width="29"
+                 onclick="window.history.back()" />
+            <h1 class="fw-bold m-3 text-center">Voltar</h1>
+        </div>
+
+        <h1 class="fw-bold pb-2">
+            Avaliação:
+            <span id="nomeAvaliacao" class="m-5 txt-gray">
+                @Html.Raw(System.Net.WebUtility.HtmlDecode(Model.Avaliacao.NomePropriedade))
+            </span>
+        </h1>
+
+        <form asp-action="SalvarRespostas" asp-controller="Avaliacao" method="post" id="formAvaliacao">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="avaliacao_id" value="@Model.Avaliacao.Id" />
+
+            <div id="stepsContainer">
+                @for (int i = 0; i < Model.Indicadores.Count; i++)
+                {
+                    var indicador = Model.Indicadores[i];
+                    <div class="indicator-step" data-step="@i" style="display:@(i == 0 ? "block" : "none")">
+                        <div class="mb-5">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="fundo-tabela">
+                                            <h1>
+                                                @(i + 1) - @Html.Raw(System.Net.WebUtility.HtmlDecode(indicador.Nome))
+                                            </h1>
+                                            @if (!string.IsNullOrWhiteSpace(indicador.Descricao))
+                                            {
+                                                <p class="fw-normal">@Html.Raw(System.Net.WebUtility.HtmlDecode(indicador.Descricao))</p>
+                                            }
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider border-top-0">
+                                    @for (int p = 0; p < indicador.Parametros.Count; p++)
+                                    {
+                                        var parametro = indicador.Parametros[p];
+                                        <tr id="parametro_@parametro.Index">
+                                            <td colspan="2">
+                                                <label class="d-flex align-items-center" style="cursor: pointer">
+                                                    <p class="my-2 me-auto fs-10">@Html.Raw(System.Net.WebUtility.HtmlDecode(parametro.Texto))</p>
+                                                    <input class="form-check-input ms-auto me-5"
+                                                           type="radio"
+                                                           name="indicador_@indicador.Id"
+                                                           value="@parametro.Index"
+                                                           required />
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- area de navegação -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <div>
+                    <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Anterior</button>
+                </div>
+
+                <div class="text-center">
+                    <small id="stepCounter">Indicador 1 de @Model.Indicadores.Count</small>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-outline-primary" id="nextBtn">Próximo</button>
+                    <button type="submit" class="btn btn-outline-success" id="finalizarBtn" style="display:none">Finalizar</button>
+                </div>
+            </div>
+
+            <!-- alerta de validação local -->
+            <div class="mt-3" id="localAlert" style="display:none">
+                <div class="alert alert-warning mb-0" role="alert" id="localAlertText"></div>
+            </div>
+        </form>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        (function() {
+          const steps = Array.from(document.querySelectorAll('.indicator-step'));
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
+          const finalizarBtn = document.getElementById('finalizarBtn');
+          const stepCounter = document.getElementById('stepCounter');
+          const localAlert = document.getElementById('localAlert');
+          const localAlertText = document.getElementById('localAlertText');
+          let current = 0;
+          const total = steps.length;
+
+          function showStep(n) {
+            steps.forEach((s, idx) => s.style.display = idx === n ? 'block' : 'none');
+            prevBtn.disabled = n === 0;
+            // se for último passo, esconder Próximo e mostrar Finalizar
+            if (n === total - 1) {
+              nextBtn.style.display = 'none';
+              finalizarBtn.style.display = 'inline-block';
+            } else {
+              nextBtn.style.display = 'inline-block';
+              finalizarBtn.style.display = 'none';
+            }
+            stepCounter.textContent = `Indicador ${n + 1} de ${total}`;
+            hideAlert();
+            // rolar para topo da avaliação
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+
+          function validateStep(n) {
+            const radios = steps[n].querySelectorAll('input[type="radio"]');
+            return Array.from(radios).some(r => r.checked);
+          }
+
+          function showAlert(message) {
+            localAlertText.textContent = message;
+            localAlert.style.display = 'block';
+          }
+
+          function hideAlert() {
+            localAlert.style.display = 'none';
+            localAlertText.textContent = '';
+          }
+
+          prevBtn.addEventListener('click', function() {
+            if (current > 0) {
+              current--;
+              showStep(current);
+            }
+          });
+
+          nextBtn.addEventListener('click', function() {
+            // valida o passo atual antes de avançar
+            if (!validateStep(current)) {
+              showAlert('Por favor, selecione uma opção antes de avançar.');
+              return;
+            }
+            if (current < total - 1) {
+              current++;
+              showStep(current);
+            }
+          });
+
+          // caso usuário tente submeter direto pelo teclado sem responder último passo
+          document.getElementById('formAvaliacao').addEventListener('submit', function(e) {
+            // valida todos os passos: garanta que cada indicador tem resposta
+            for (let i = 0; i < total; i++) {
+              const radios = steps[i].querySelectorAll('input[type="radio"]');
+              if (!Array.from(radios).some(r => r.checked)) {
+                e.preventDefault();
+                current = i;
+                showStep(current);
+                showAlert('Por favor, responda todos os indicadores antes de finalizar.');
+                return false;
+              }
+            }
+            return true;
+          });
+
+          // inicializa
+          showStep(current);
+        })();
+    </script>
+}

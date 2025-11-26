@@ -1,0 +1,102 @@
+﻿@using System.Text.Json
+@model ProtocoloRural.ViewModels.ResultadosViewModel
+@{
+    ViewData["Title"] = "Resultados da Avaliação";
+}
+
+<main>
+    <div class="container mt-5 pt-5">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-3">
+            <!-- coluna esquerda: nome e data -->
+            <div>
+                <h1 class="mb-1">@Html.Raw(System.Net.WebUtility.HtmlDecode(Model.Avaliacao.NomePropriedade))</h1>
+                <p class="text-muted mb-0">@Model.Avaliacao.DataAvaliacao.ToString("g")</p>
+            </div>
+            <div class="text-md-end mt-3 mt-md-0">
+                <h1 class="mb-0">Grau de Sustentabilidade: @Model.Avaliacao.GrauPorcentagem.ToString("F1") %</h1>
+            </div>
+        </div>
+
+        <div class="table-responsive mb-4">
+            <table class="table">
+                <thead class="fundo-tabela">
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Parâmetro Selecionado</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider border-top-0">
+                    @if (Model.Respostas == null || !Model.Respostas.Any())
+                    {
+                        <tr>
+                            <td colspan="3" class="text-center">Nenhuma resposta registrada.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var r in Model.Respostas)
+                        {
+                            <tr>
+                                <td>@Html.Raw(System.Net.WebUtility.HtmlDecode(r.IndicadorNome))</td>
+                                <td class="text-muted">@Html.Raw(System.Net.WebUtility.HtmlDecode(r.ParametroTexto))</td>
+                                <td>@r.Valor</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Charts: barra de sustentabilidade e polar dos indicadores -->
+        <div class="row gy-4">
+            <div class="col-md-5 col-sm-12 d-flex flex-column align-items-center">
+                <h5 class="mb-3 text-center">Grau de Sustentabilidade da Propriedade</h5>
+                <div style="width:100%; max-width:400px;">
+                    <!-- canvas para BAR (estilo que você quer) -->
+                    <canvas id="barSustentabilidadeChart" width="400" height="300"></canvas>
+                </div>
+            </div>
+
+            <div class="col-md-7 col-sm-12 d-flex flex-column align-items-center">
+                <h5 class="mb-3 text-center">Visualização Gráfico dos Indicadores</h5>
+                <div style="width:100%; max-width:600px;">
+                    <canvas id="indicadoresChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <a href="@Url.Action("Index", "Painel")" class="btn btn-outline-primary">Voltar ao Painel</a>
+            <button class="btn btn-outline-secondary ms-2" onclick="window.print()">Imprimir</button>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        // definir variáveis JS (numéricas onde necessário)
+        window.indicadorLabels = @Html.Raw(JsonSerializer.Serialize(Model.Respostas.Select(r => r.IndicadorNome).ToList()));
+        window.indicadorValores = @Html.Raw(JsonSerializer.Serialize(Model.Respostas.Select(r => r.Valor).ToList()));
+        window.indicadorParametros = @Html.Raw(JsonSerializer.Serialize(Model.Respostas.Select(r => r.ParametroTexto).ToList()));
+        window.grauPorcentagem = @Html.Raw(JsonSerializer.Serialize(Model.Avaliacao.GrauPorcentagem));
+        window.grauSustentabilidade = window.grauPorcentagem; // compatibilidade
+        window.palette = @Html.Raw(JsonSerializer.Serialize(new[] {
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(54, 162, 235, 0.6)",
+                "rgba(255, 205, 86, 0.6)",
+                "rgba(75, 192, 192, 0.6)",
+                "rgba(153, 102, 255, 0.6)",
+                "rgba(255, 159, 64, 0.6)",
+                "rgba(201, 203, 207, 0.6)"
+        }));
+</script>
+
+    <!-- Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- arquivos JS em wwwroot/js -->
+    <script src="~/js/grafico_parametro.js"></script>
+    <script src="~/js/grafico_sustentabilidade.js"></script>
+}
