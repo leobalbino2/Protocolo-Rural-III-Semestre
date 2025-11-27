@@ -355,7 +355,12 @@ Atualmente ela se localiza no link à baixo:
 [Wireframe Protocolo Rural](https://www.figma.com/design/pcAL45RIRkzJonJIfegYL8/Wireframe---Protocolo-Rural?node-id=0-1&t=fn86gsElgTURtnbu-1 "hover text")
 
 # 9. Personas
+![Preview][prsn]
 
+
+
+
+![Preview][prsn2]
 
 
 # 10. Protótipo
@@ -420,5 +425,7 @@ CHART.JS. Biblioteca JavaScript de código aberto para criação de gráficos in
 [mdn]: imgs/modelonegocios.jpeg
 [pdc]: imgs/paleta.jpeg
 [fnt]: imgs/fonte.jpeg
+[prsn]: imgs/persona.jpeg
+[prsn2]: imgs/personaSecundaria.jpeg
 
 
