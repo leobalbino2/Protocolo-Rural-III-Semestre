@@ -13,14 +13,13 @@
   - [Requisitos não funcionais](#-requisitos-não-funcionais)
 - [3. Modelo de casos de uso](#3-modelo-de-casos-de-uso)
 - [4. Modelo do banco de dados](#4-modelo-do-banco-de-dados)
-- [5. Banco de dados](#5-banco-de-dados)
-- [6. Diagrama de classes](#6-diagrama-de-classes)
-- [7. Estudo de viabilidade](#7-estudo-de-viabilidade)
-- [8. Regras de negócio (Modelo canvas)](#8-regras-de-negócio-modelo-canvas)
-- [9. Design](#9-design)
-- [10. Protótipo](#10-protótipo)
-- [11. Aplicação](#11-aplicação)
-- [12. Considerações Finais](#12-considerção-finais)
+- [5. Diagrama de classes](#6-diagrama-de-classes)
+- [6. Estudo de viabilidade](#7-estudo-de-viabilidade)
+- [7. Regras de negócio (Modelo canvas)](#8-regras-de-negócio-modelo-canvas)
+- [8. Design](#9-design)
+- [9. Protótipo](#10-protótipo)
+- [10. Aplicação](#11-aplicação)
+- [11. Considerações Finais](#12-considerção-finais)
 
 </details>
 
@@ -249,25 +248,20 @@ O usuário não consegue dar continuidade na sua avaliação enquanto não respo
 #### Pós Condições: 
 A avaliação é finalizada e seus resultados são armazenados e ficam disponíveis para visualização no painel de avaliações.
 
-
-
 # 4. Modelo do banco de dados
-(Modelo conceitual, Modelo lógico, Físico)
-
-# 5. Banco de dados
 O banco de dados foi desenvolvido de acordo com as necessidades da aplicação, garantindo que as informações fossem armazenadas de forma flexível e adequada ao tipo de dados trabalhado.
 
 Foi utilizado o MongoDB como sistema de banco de dados NoSQL por oferecer alta flexibilidade na modelagem e boa performance para grandes volumes de dados, o que se integra facilmente com aplicações modernas.
 
 A criação e gestão do banco foram realizadas utilizando o MongoDB Compass. Essa ferramenta facilita a visualização dos documentos, a criação de coleções, a execução de consultas utilizando a sintaxe do MongoDB e o acompanhamento do funcionamento geral do banco. Elas foram essenciais para controlar a estrutura dos dados.
 
-# 6. Diagrama de classes
+# 5. Diagrama de classes
 O diagrama de classe é uma representação visual da estrutura de um sistema orientado a objetos.
 
 ![Preview][ddc]
 
 
-# 7. Estudo de viabilidade
+# 6. Estudo de viabilidade
 O estudo de viabilidade é uma avaliação preliminar que determina se um projeto é possível de ser executado através da examinação de aspectos técnicos, econômicos, legais e operacionais para identificar potenciais obstáculos antes do início do projeto e se ele é viável ou não.
 
 ### VIABILIDADE TÉCNICA
@@ -290,7 +284,7 @@ O estudo de viabilidade do Protocolo Rural mostra que o projeto é realizável s
 Mesmo sendo um projeto sem fins lucrativos, os custos são reduzidos, e sua execução se mostra sustentável no contexto acadêmico. Além disso, há uma demanda concreta no setor agropecuário por soluções que facilitem o monitoramento da sustentabilidade rural.
 
 
-# 8. Regras de negócio (Modelo canvas)
+# 7. Regras de negócio (Modelo canvas)
 ![Preview][mdn]
 
 ###	O QUE SERÁ REALIZADO?
@@ -334,7 +328,7 @@ __Fontes de Receita__
 Projeto sem fins lucrativos, focado em desenvolver uma aplicação web para ajudar a avaliar a sustentabilidade de propriedades rurais, assim contribuindo para boas práticas ambientais.
 
 
-# 9. Design
+# 8. Design
 
 ### Paleta de Cor
 As cores escolhidas para o projeto foram selecionadas através de um esquema de cores análogas, uma combinação de três cores próximas uma da outra em um círculo cromático. 
@@ -359,19 +353,19 @@ Atualmente ela se localiza no link à baixo:
 [Wireframe Protocolo Rural](https://www.figma.com/design/pcAL45RIRkzJonJIfegYL8/Wireframe---Protocolo-Rural?node-id=0-1&t=fn86gsElgTURtnbu-1 "hover text")
 
 
-# 10. Protótipo
+# 9. Protótipo
 O protótipo do projeto foi criado através da plataforma de design e prototipagem Figma. O link segue logo à baixo.
 
 [Protótipo Protocolo Rural](https://www.figma.com/design/oWrjSVdJYFZ6AjlZ1ABUgw/Prot%C3%B3tipo---Protocolo-Rural?node-id=0-1&t=aeE2ZFcHH2HeqOoj-1 "hover text")
 
 
-# 11. Aplicação
+# 10. Aplicação
 A página para o GitHub do projeto se encontra no link abaixo:
 
 [Aplicação Protocolo Rural](https://github.com/leobalbino2/Protocolo-Rural-III-Semestre "hover text")
 
 
-# 12. Considerações Finais
+# 11. Considerações Finais
 O terceiro semestre do projeto trouxe desafios que influenciaram diretamente esta etapa. Um dos principais pontos foi a necessidade de ampliar nosso conhecimento técnico em todas as partes do sistema, especialmente no desenvolvimento em C#. Além disso, enfrentamos a falta de tempo necessário para concluir todas as funcionalidades planejadas.
 
 Mesmo com essas dificuldades, conseguimos entregar uma versão funcional que atende aos objetivos centrais definidos para o semestre. Os resultados foram satisfatórios, embora a equipe reconheça que ainda há espaço para melhorias e ajustes. Continuamos motivados a avançar no projeto, buscando torná-lo mais completo e fiel à proposta original.
