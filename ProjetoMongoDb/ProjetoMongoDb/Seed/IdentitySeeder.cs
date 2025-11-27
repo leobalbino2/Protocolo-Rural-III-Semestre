@@ -15,7 +15,7 @@ namespace ProtocoloRural.Seed
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
             const string adminRole = "Administrador";
-            const string adminEmail = "admin@seudominio.com"; // Email padrão do administrador
+            const string adminEmail = "ProtocoloRural@gmail.com"; // Email padrão do administrador
 
             // --- PARTE 1: GARANTIR QUE A ROLE EXISTA ---
 
@@ -40,7 +40,7 @@ namespace ProtocoloRural.Seed
                 {
                     UserName = adminEmail,
                     Email = adminEmail,
-                    NomeCompleto = "Administrador Master", // Adicione o nome
+                    NomeCompleto = "Administrador", // Adicione o nome
                     EmailConfirmed = true
                 };
 

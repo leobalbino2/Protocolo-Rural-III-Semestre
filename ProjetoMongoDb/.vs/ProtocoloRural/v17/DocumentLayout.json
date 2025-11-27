@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\home\\sobre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\home\\sobre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\avaliacao\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\avaliacao\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\painel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\painel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\home\\sobre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\home\\sobre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\user\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\user\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,56 +39,60 @@
       "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\controllers\\painelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\minhacontaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\minhacontaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\avaliacaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\avaliacaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\indicadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\indicadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\resultados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\resultados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\painel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\painel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\wwwroot\\js\\grafico_sustentabilidade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\wwwroot\\js\\grafico_sustentabilidade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\wwwroot\\js\\grafico_parametro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\wwwroot\\js\\grafico_parametro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\controllers\\resultadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\controllers\\resultadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\account\\minhaconta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\account\\minhaconta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\avaliacaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\avaliacaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\resultadosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\resultadosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\resetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\painelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\painelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\viewmodels\\minhacontaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\viewmodels\\minhacontaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\seed\\identityseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\seed\\identityseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|c:\\users\\leona\\onedrive\\desktop\\protocolo-rural-iii-semestre\\projetomongodb\\projetomongodb\\views\\indicadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5515008B-2A2C-4F1B-87DA-DC6676B44223}|ProjetoMongoDb\\ProtocoloRural.csproj|solutionrelative:projetomongodb\\views\\indicadores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,33 +102,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Sobre.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAYwFkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T01:12:31.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T01:11:43.966Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -121,201 +112,287 @@
               "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ProjetoMongoDb\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAuwFoAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T01:10:34.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T14:58:10.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "ProjetoMongoDb\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-26T15:20:00.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "grafico_sustentabilidade.js",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\wwwroot\\js\\grafico_sustentabilidade.js",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\wwwroot\\js\\grafico_sustentabilidade.js",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\wwwroot\\js\\grafico_sustentabilidade.js",
-              "RelativeToolTip": "ProjetoMongoDb\\wwwroot\\js\\grafico_sustentabilidade.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-26T15:08:09.084Z"
+              "WhenOpened": "2025-11-27T03:19:31.726Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Avaliacao\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Avaliacao\\Index.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Avaliacao\\Index.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Avaliacao\\Index.cshtml",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAYwMEAAAABAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Painel\\Index.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T03:35:18.956Z"
+              "WhenOpened": "2025-11-27T03:19:27.243Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:19:22.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAswMAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:10:29.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateRole.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\User\\CreateRole.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\User\\CreateRole.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\User\\CreateRole.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\User\\CreateRole.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:10:24.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PainelController.cs",
               "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\PainelController.cs",
               "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\PainelController.cs",
               "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\PainelController.cs",
               "RelativeToolTip": "ProjetoMongoDb\\Controllers\\PainelController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAewEYAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T15:01:34.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\UserController.cs",
-              "RelativeToolTip": "ProjetoMongoDb\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAQwIUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T00:51:46.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ProjetoMongoDb\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAOsAAAAAAAAAAAA3wP8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T00:51:59.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwGQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:03:46.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "grafico_parametro.js",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\wwwroot\\js\\grafico_parametro.js",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\wwwroot\\js\\grafico_parametro.js",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\wwwroot\\js\\grafico_parametro.js",
-              "RelativeToolTip": "ProjetoMongoDb\\wwwroot\\js\\grafico_parametro.js",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-26T15:07:54.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MinhaContaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
-              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA1wAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:51:29.277Z"
+              "WhenOpened": "2025-11-27T03:09:43.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
-              "ViewState": "AgIAALwAAAAAAAAAAAAYwMwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T15:46:53.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AvaliacaoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
-              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBUAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:41:21.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Resultados\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Resultados\\Index.cshtml",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Resultados\\Index.cshtml",
-              "RelativeToolTip": "ProjetoMongoDb\\Views\\Resultados\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T14:50:27.449Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AvaliacaoController.cs",
-              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
-              "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
-              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
-              "RelativeToolTip": "ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAewEwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:41:34.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "ResultadosController.cs",
               "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\ResultadosController.cs",
               "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\ResultadosController.cs",
               "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\ResultadosController.cs",
               "RelativeToolTip": "ProjetoMongoDb\\Controllers\\ResultadosController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAYwGUAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:50:43.903Z"
+              "WhenOpened": "2025-11-27T03:09:41.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AvaliacaoController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\Controllers\\AvaliacaoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T03:09:39.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sobre.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Home\\Sobre.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAACMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:07:33.794Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "MinhaContaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\MinhaContaViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:56:32.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAuwIUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:54:36.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\User\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\User\\Create.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\User\\Create.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\User\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T02:54:17.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PainelViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\PainelViewModel.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\PainelViewModel.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\PainelViewModel.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\PainelViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:56:36.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T02:54:07.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ResetPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\ResetPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\ResetPasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\ResetPasswordViewModel.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\ResetPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:56:36.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ResultadosViewModel.cs",
               "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\ResultadosViewModel.cs",
               "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\ResultadosViewModel.cs",
               "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\ResultadosViewModel.cs",
               "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\ResultadosViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:54:48.357Z"
+              "WhenOpened": "2025-11-27T02:56:37.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Models\\UserRole.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Models\\UserRole.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:54:27.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AvaliacaoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\AvaliacaoViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:56:40.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MinhaConta.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Account\\MinhaConta.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Account\\MinhaConta.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Account\\MinhaConta.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Account\\MinhaConta.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T02:54:09.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T03:04:03.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Models\\User.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\Models\\User.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:53:34.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IdentitySeeder.cs",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Seed\\IdentitySeeder.cs",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Seed\\IdentitySeeder.cs",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Seed\\IdentitySeeder.cs",
+              "RelativeToolTip": "ProjetoMongoDb\\Seed\\IdentitySeeder.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T02:46:30.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
+              "ToolTip": "C:\\Users\\leona\\OneDrive\\Desktop\\Protocolo-Rural-III-Semestre\\ProjetoMongoDb\\ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
+              "RelativeToolTip": "ProjetoMongoDb\\Views\\Indicadores\\Index.cshtml",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAAwOkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T02:10:39.907Z"
             }
           ]
         }

@@ -1,4 +1,4 @@
-﻿@model ProtocoloRural.Models.User
+﻿@model ProtocoloRural.Models.RegisterViewModel
 @using System.Linq
 @{
     ViewData["title"] = "Cadastro";
@@ -40,12 +40,9 @@
                 <input type="hidden" name="role" value="@(ViewBag.Role ?? "usuario")" />
 
                 <div class="d-flex align-items-center mb-3">
-                    <img class="cursor-pointer d-none d-lg-block pe-auto btn-back"
-                         id="voltar"
-                         src="@(Url.Content("~/imgs/seta.png"))"
-                         alt="voltar"
-                         width="29"
-                         onclick="window.location.href='@(Url.Action("Index", "Home"))'" />
+                    <a class="d-none d-lg-block pe-auto btn-back" asp-controller="Account" asp-action="Login" title="Voltar para login">
+                        <img class="cursor-pointer" id="voltar" src="@(Url.Content("~/imgs/seta.png"))" alt="voltar" width="29" />
+                    </a>
                     <h5 class="fw-bold m-3 text-center flex-grow-1">Cadastre-se</h5>
                 </div>
 

@@ -25,20 +25,20 @@ namespace ProtocoloRural.Controllers
         public IActionResult Create(string role)
         {
             ViewBag.Role = role;
-            return View();
+            return View(new RegisterViewModel());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(User user, string role)
+        public async Task<IActionResult> Create(RegisterViewModel model, string role)
         {
             if (!ModelState.IsValid)
-                return View(user);
+                return View(model);
 
             ApplicationUser appuser = new ApplicationUser();
 
             // gerar username a partir do nome (remover espaços, acentos e caracteres inválidos)
-            string userName = (user.NomeCompleto ?? "").Replace(" ", "");
+            string userName = (model.NomeCompleto ?? "").Replace(" ", "");
             var normalizedString = userName.Normalize(NormalizationForm.FormD);
             StringBuilder sb = new StringBuilder();
             foreach (char c in normalizedString)
@@ -50,25 +50,25 @@ namespace ProtocoloRural.Controllers
             userName = Regex.Replace(userName, @"[^a-zA-Z0-9\s]", "");
             appuser.UserName = userName;
 
-            appuser.Email = user.Email;
-            appuser.NomeCompleto = user.NomeCompleto;
+            appuser.Email = model.Email;
+            appuser.NomeCompleto = model.NomeCompleto;
 
             // atribuir celular (mantendo apenas dígitos) e PhoneNumber para compatibilidade com Identity
-            if (!string.IsNullOrWhiteSpace(user.Celular))
+            if (!string.IsNullOrWhiteSpace(model.Celular))
             {
-                var digits = new string(user.Celular.Where(char.IsDigit).ToArray());
+                var digits = new string(model.Celular.Where(char.IsDigit).ToArray());
                 appuser.Celular = digits;
                 appuser.PhoneNumber = digits;
             }
 
-            IdentityResult result = await _userManager.CreateAsync(appuser, user.Password);
+            IdentityResult result = await _userManager.CreateAsync(appuser, model.Password);
             if (!result.Succeeded)
             {
                 foreach (IdentityError error in result.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
                 }
-                return View(user);
+                return View(model);
             }
 
             // se foi criado, cuidar da role (garantir existência e depois atribuir)
@@ -82,7 +82,7 @@ namespace ProtocoloRural.Controllers
                         foreach (var er in createRoleResult.Errors)
                             ModelState.AddModelError("", $"Erro criando perfil '{role}': {er.Description}");
                         ViewBag.Message = "Usuário criado, mas não foi possível criar o perfil.";
-                        return View(user);
+                        return View(model);
                     }
                 }
 
@@ -92,14 +92,14 @@ namespace ProtocoloRural.Controllers
                     foreach (var er in addRoleResult.Errors)
                         ModelState.AddModelError("", $"Erro atribuindo perfil: {er.Description}");
                     ViewBag.Message = "Usuário criado, mas não foi possível atribuir o perfil.";
-                    return View(user);
+                    return View(model);
                 }
             }
 
             ViewBag.Message = "Usuário cadastrado com sucesso";
             // limpar ModelState se quiser retornar view vazia:
             ModelState.Clear();
-            return View(new User());
+            return View(new RegisterViewModel());
         }
 
         [Authorize(Roles = "Administrador")]

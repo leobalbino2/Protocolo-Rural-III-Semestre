@@ -20,12 +20,10 @@
 <main>
     <div class="container mt-5 pt-5">
         <div class="form-box col-12 col-lg-6 mx-auto border p-4 bg-white">
-            @* Mostra erro do TempData (ex: senha errada) *@
             @if (TempData["Error"] != null)
             {
                 <div class="alert alert-danger text-center mb-3 d-flex align-items-center justify-content-center" role="alert" style="border-radius:10px;">
                     <span class="me-2">
-                        <!-- SVG de aviso vermelho -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.964 0l-6.857 11.667c-.457.779.091 1.767.982 1.767H14.857c.891 0 1.439-.988.982-1.767L8.982 1.566zm-1.982.61a.13.13 0 0 1 .233 0l6.857 11.667a.13.13 0 0 1-.11.197H1.278a.13.13 0 0 1-.11-.196L8 2.175z" /><path d="M7.002 10.994v.002h2.004v-.002c0-.53-.448-.97-.998-.97s-.998.44-.998.97zm1.001-4.532a.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0v-3z" /></svg>
                     </span>
                     <span>@TempData["Error"]</span>
@@ -39,7 +37,6 @@
                 </div>
             }
 
-            @* Só mostra validação se tiver erros (sem bolinha solta) *@
             @if (ViewData.ModelState.ErrorCount > 0)
             {
                 <div asp-validation-summary="All" class="text-danger text-center mb-2"></div>
