@@ -12,14 +12,16 @@
   - [Requisitos funcionais](#-requisitos-funcionais)
   - [Requisitos não funcionais](#-requisitos-não-funcionais)
 - [3. Modelo de casos de uso](#3-modelo-de-casos-de-uso)
-- [4. Modelo do banco de dados](#4-modelo-do-banco-de-dados)
+- [4. Banco de Dados](#4banco-de-dados)
 - [5. Diagrama de classes](#6-diagrama-de-classes)
 - [6. Estudo de viabilidade](#7-estudo-de-viabilidade)
 - [7. Regras de negócio (Modelo canvas)](#8-regras-de-negócio-modelo-canvas)
 - [8. Design](#9-design)
-- [9. Protótipo](#10-protótipo)
-- [10. Aplicação](#11-aplicação)
-- [11. Considerações Finais](#12-considerção-finais)
+- [9. Personas](#9-personas)
+- [10. Protótipo](#10-protótipo)
+- [11. Aplicação](#11-aplicação)
+- [12. Considerações Finais](#12-considerções-finais)
+- [13. Referências](#11-referências)
 
 </details>
 
@@ -248,7 +250,7 @@ O usuário não consegue dar continuidade na sua avaliação enquanto não respo
 #### Pós Condições: 
 A avaliação é finalizada e seus resultados são armazenados e ficam disponíveis para visualização no painel de avaliações.
 
-# 4. Modelo do banco de dados
+# 4. Banco de Dados
 O banco de dados foi desenvolvido de acordo com as necessidades da aplicação, garantindo que as informações fossem armazenadas de forma flexível e adequada ao tipo de dados trabalhado.
 
 Foi utilizado o MongoDB como sistema de banco de dados NoSQL por oferecer alta flexibilidade na modelagem e boa performance para grandes volumes de dados, o que se integra facilmente com aplicações modernas.
@@ -352,24 +354,65 @@ Atualmente ela se localiza no link à baixo:
 
 [Wireframe Protocolo Rural](https://www.figma.com/design/pcAL45RIRkzJonJIfegYL8/Wireframe---Protocolo-Rural?node-id=0-1&t=fn86gsElgTURtnbu-1 "hover text")
 
+# 9. Personas
 
-# 9. Protótipo
+
+
+# 10. Protótipo
 O protótipo do projeto foi criado através da plataforma de design e prototipagem Figma. O link segue logo à baixo.
 
 [Protótipo Protocolo Rural](https://www.figma.com/design/oWrjSVdJYFZ6AjlZ1ABUgw/Prot%C3%B3tipo---Protocolo-Rural?node-id=0-1&t=aeE2ZFcHH2HeqOoj-1 "hover text")
 
 
-# 10. Aplicação
+# 11. Aplicação
 A página para o GitHub do projeto se encontra no link abaixo:
 
 [Aplicação Protocolo Rural](https://github.com/leobalbino2/Protocolo-Rural-III-Semestre "hover text")
 
 
-# 11. Considerações Finais
+# 12. Considerações Finais
 O terceiro semestre do projeto trouxe desafios que influenciaram diretamente esta etapa. Um dos principais pontos foi a necessidade de ampliar nosso conhecimento técnico em todas as partes do sistema, especialmente no desenvolvimento em C#. Além disso, enfrentamos a falta de tempo necessário para concluir todas as funcionalidades planejadas.
 
 Mesmo com essas dificuldades, conseguimos entregar uma versão funcional que atende aos objetivos centrais definidos para o semestre. Os resultados foram satisfatórios, embora a equipe reconheça que ainda há espaço para melhorias e ajustes. Continuamos motivados a avançar no projeto, buscando torná-lo mais completo e fiel à proposta original.
 
+# 13. Referências
+MATTESON, Steve. Open Sans. Disponível em: https://fonts.google.com/specimen/Open+Sans. Acessado em: 12 de novembro de 2024
+
+ 
+PIERI, Lucas Vinicius de. Indicadores de sustentabilidade rural no ecótono do Centro-Oeste paulista. 2018. 64 f. Trabalho de Conclusão de Curso (Curso de Meio Ambiente) – Faculdade de Tecnologia de Jahu, Jahu, 2018.  
+
+ 
+TRELLO. Plataforma de gestão de projetos e colaboração. Disponível em: https://trello.com/home. Acessado em: 04 de novembro de 2024 
+
+ 
+FIGMA. Plataforma de design colaborativo online. Disponível em: https://www.figma.com/. Acessado em: 07 de novembro de 2024. 
+
+ 
+BOOTSTRAP. Framework CSS para desenvolvimento front-end responsivo. Disponível em: https://getbootstrap.com/. Acessado em: 25 de novembro de 2024. 
+
+ 
+
+GITHUB. Plataforma de hospedagem de código-fonte e controle de versão. Disponível em: https://github.com/. Acessado em: 25 de novembro de 2024. 
+
+ 
+GRID. Calculador de grid responsivo. Disponível em: http://gridcalculator.dk/. Acessado em: 12 de novembro de 2024. 
+
+
+AELA CONTENTS. Grids: como usar esse sistema para designs responsivos ?. Disponível em: https://medium.com/aela/grids-como-usar-esse-sistema-para-designs-responsivos-c6b3dd1c0383. Acessado em: 12 de novembro de 2024. 
+
+ 
+SOUSA, Rafaela. Sustentabilidade. Disponível em: https://brasilescola.uol.com.br/educacao/sustentabilidade.htm. Acessado em: 09 de novembro de 2024. 
+
+ 
+FERREIRA, José Mário Lobo; VIANA, João Herbert Moreira; COSTA, Adriana Monteiro da; SOUSA, Daniel Vieira de; FONTES, Andréia Aline. ISA (Indicadores de Sustentabilidade em Agroecossistemas). Disponível em: https://www.epamig.br/wp-content/uploads/2023/03/art2-ia271.pdf. Acessado em 10 de novembro de 2024. 
+
+ 
+DRAW.IO. Plataforma online para criação de diagramas de forma simples e colaborativa. Disponível em: https://app.diagrams.net. Acessado em: 29 de abril de 2025. 
+
+ 
+CHART.JS. Biblioteca JavaScript de código aberto para criação de gráficos interativos e responsivos. Disponível em: https://www.chartjs.org. Acessado em: 19 de maio de 2025. 
+
+ 
 
 [cdu]: imgs/casodeuso.jfif
 [ddc]: imgs/diagramaclasse.jpeg
