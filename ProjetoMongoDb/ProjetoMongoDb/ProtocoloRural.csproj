@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Contato\**" />
+    <Content Remove="Views\Contato\**" />
+    <EmbeddedResource Remove="Views\Contato\**" />
+    <None Remove="Views\Contato\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Views\Home\QuemSomos.cs" />
     <Compile Remove="Views\Home\QuemSomos.cshtml.cs" />
   </ItemGroup>
@@ -30,7 +37,6 @@
 
   <ItemGroup>
     <Folder Include="Seed\" />
-    <Folder Include="Views\Contato\" />
     <Folder Include="wwwroot\imgs\" />
   </ItemGroup>
 
