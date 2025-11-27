@@ -24,6 +24,7 @@ namespace ProtocoloRural.Controllers
             _signInManager = signInManager;
             _emailService = emailService;
         }
+
         public IActionResult Login()
         {
             return View();
@@ -44,8 +45,9 @@ namespace ProtocoloRural.Controllers
                     {
                         return RedirectToAction("Index", "Home");
                     }
-                    ModelState.AddModelError(nameof(email), "Verifique as credenciais");
                 }
+                // Mensagem de erro para credencial inválida
+                TempData["Error"] = "E-mail ou senha inválidos!";
             }
             return View();
         }

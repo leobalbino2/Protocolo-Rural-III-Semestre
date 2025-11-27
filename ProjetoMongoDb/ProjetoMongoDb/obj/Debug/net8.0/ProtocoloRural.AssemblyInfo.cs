@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProtocoloRural")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+915d06c327c7e3882d5938bb987cb6302a4575c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ece429364ddd9b44fffd3090acf27f8d4f7d4d6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProtocoloRural")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProtocoloRural")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
