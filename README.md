@@ -254,6 +254,11 @@ A avaliação é finalizada e seus resultados são armazenados e ficam disponív
 (Modelo conceitual, Modelo lógico, Físico)
 
 # 5. Banco de dados
+O banco de dados foi desenvolvido de acordo com as necessidades da aplicação, garantindo que as informações fossem armazenadas de forma flexível e adequada ao tipo de dados trabalhado.
+
+Foi utilizado o MongoDB como sistema de banco de dados NoSQL por oferecer alta flexibilidade na modelagem e boa performance para grandes volumes de dados, o que se integra facilmente com aplicações modernas.
+
+A criação e gestão do banco foram realizadas utilizando o MongoDB Compass. Essa ferramenta facilita a visualização dos documentos, a criação de coleções, a execução de consultas utilizando a sintaxe do MongoDB e o acompanhamento do funcionamento geral do banco. Elas foram essenciais para controlar a estrutura dos dados.
 
 # 6. Diagrama de classes
 O diagrama de classe é uma representação visual da estrutura de um sistema orientado a objetos.
