@@ -374,7 +374,7 @@ A página para o GitHub do projeto se encontra no link abaixo:
 # 12. Considerações Finais
 O terceiro semestre do projeto trouxe desafios que influenciaram diretamente esta etapa. Um dos principais pontos foi a necessidade de ampliar nosso conhecimento técnico em todas as partes do sistema, especialmente no desenvolvimento em C#. Além disso, enfrentamos a falta de tempo necessário para concluir todas as funcionalidades planejadas.
 
-Mesmo com essas dificuldades, conseguimos entregar uma versão funcional que atende aos objetivos centrais definidos para o semestre. Os resultados foram satisfatórios, embora a equipe reconheça que ainda há espaço para melhorias e ajustes. Continuamos motivados a avançar no projeto, buscando torná-lo mais completo e fiel à proposta original
+Mesmo com essas dificuldades, conseguimos entregar uma versão funcional que atende aos objetivos centrais definidos para o semestre. Os resultados foram satisfatórios, embora a equipe reconheça que ainda há espaço para melhorias e ajustes. Continuamos motivados a avançar no projeto, buscando torná-lo mais completo e fiel à proposta original.
 
 
 [cdu]: imgs/casodeuso.jfif
