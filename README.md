@@ -20,6 +20,7 @@
 - [9. Design](#9-design)
 - [10. Protótipo](#10-protótipo)
 - [11. Aplicação](#11-aplicação)
+- [12. Considerações Finais](#12-considerção-finais)
 
 </details>
 
@@ -370,6 +371,10 @@ A página para o GitHub do projeto se encontra no link abaixo:
 [Aplicação Protocolo Rural](https://github.com/leobalbino2/Protocolo-Rural-III-Semestre "hover text")
 
 
+# 12. Considerações Finais
+O terceiro semestre do projeto trouxe desafios que influenciaram diretamente esta etapa. Um dos principais pontos foi a necessidade de ampliar nosso conhecimento técnico em todas as partes do sistema, especialmente no desenvolvimento em C#. Além disso, enfrentamos a falta de tempo necessário para concluir todas as funcionalidades planejadas.
+
+Mesmo com essas dificuldades, conseguimos entregar uma versão funcional que atende aos objetivos centrais definidos para o semestre. Os resultados foram satisfatórios, embora a equipe reconheça que ainda há espaço para melhorias e ajustes. Continuamos motivados a avançar no projeto, buscando torná-lo mais completo e fiel à proposta original
 
 
 [cdu]: imgs/casodeuso.jfif
