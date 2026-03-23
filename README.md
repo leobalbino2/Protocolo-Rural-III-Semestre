@@ -1,16 +1,11 @@
-<p align="left" style="font-size:28px;"><strong><em>DOCUMENTO DA APLICAÇÃO WEB</em></strong></p>
-
-![Preview][lg]
+# DOCUMENTO DA APLICAÇÃO
 
 <details>
   <summary><strong>📑 Sumário</strong></summary>
 
 - [1. Introdução](#1-introdução)
   - [Objetivos](#-objetivos)
-  - [Metodologia](#-metodologia)
 - [2. Requisitos](#2-requisitos)
-  - [Requisitos funcionais](#-requisitos-funcionais)
-  - [Requisitos não funcionais](#-requisitos-não-funcionais)
 - [3. Modelo de casos de uso](#3-modelo-de-casos-de-uso)
 - [4. Banco de Dados](#4banco-de-dados)
 - [5. Diagrama de classes](#6-diagrama-de-classes)
@@ -20,412 +15,306 @@
 - [9. Personas](#9-personas)
 - [10. Protótipo](#10-protótipo)
 - [11. Aplicação](#11-aplicação)
-- [12. Considerações Finais](#12-considerções-finais)
+- [12. Considerações Finais](#12-considerações-finais)
 - [13. Referências](#11-referências)
 
 </details>
 
-
-
-
-
 # 1. Introdução
-O conceito de sustentabilidade surgiu da necessidade de refletir sobre como a sociedade usa e explora os recursos naturais. O intuito é buscar alternativas que preservem esses recursos, evitando o esgotamento e garantindo sua disponibilidade para o futuro.  
 
-A crescente preocupação com a sustentabilidade nas práticas agrícolas reforça a necessidade de ferramentas acessíveis, de fácil utilização e compreensão, que ajudem os produtores rurais, técnicos e gestores municipais a monitorar e melhorar a sustentabilidade de suas atividades.  
+Nos últimos anos, a forma como profissionais e empresas prestadoras de serviços se apresentam ao mercado passou por mudanças significativas. A presença digital deixou de ser um diferencial e tornou-se essencial para gerar visibilidade, credibilidade e facilitar o contato com clientes.
 
-A aplicação web de Protocolo Rural foi desenvolvida para substituir a planilha de Protocolo de Avaliação da Sustentabilidade Rural para o Ecótono do Centro Oeste Paulista criada no excel pelo aluno Lucas Vinicius de Pieri como parte de seu TCC.  O projeto busca classificar o grau de sustentabilidade das propriedades rurais, aos interessados, por meio de questionários construídos com base em indicadores ambientais, sociais e econômicos, para que os usuários possam refletir e possivelmente aprimorar os procedimentos usados em suas propriedades rurais.  
+Entretanto, muitos profissionais autônomos e microempresas ainda dependem de processos informais, como mensagens por aplicativos e registros manuais, o que dificulta a organização de atendimentos, solicitações de orçamento e divulgação de seus serviços.
+
+Diante desse cenário, este projeto integrador propõe o desenvolvimento de uma plataforma digital para intermediação e gestão de serviços. A solução permitirá que prestadores de serviços divulguem seus trabalhos e organizem seus atendimentos, enquanto clientes poderão localizar profissionais e solicitar orçamentos de forma centralizada.
+
+A empresa Estrutucasa, atuante no setor de estruturas metálicas e registrada como Microempreendedor Individual (MEI), será utilizada como estudo de caso para validação das funcionalidades da plataforma em um contexto real de mercado.
 
 ## • Objetivos
 
-### Geral 
-Desenvolver uma Plataforma Web que possibilite classificar o grau de sustentabilidade de propriedades rurais na região agrícola de Jaú/SP, em substituição ao instrumento utilizado atualmente (planilha do excel).  
+### Geral
 
-### Específicos 
-• Estudar a dinâmica da Planilha de Protocolo de Avaliação da Sustentabilidade Rural para o Ecótono do Centro Oeste Paulista.
-Identificar os indicadores de Sustentabilidade (parâmetros utilizados para       localizar áreas que afetam a sustentabilidade de um agrossistema) e formular como podem ser transferidos e implementados em uma aplicação web. 
+Desenvolver uma plataforma web que facilite a conexão entre clientes e prestadores de serviços, oferecendo recursos para divulgação profissional, solicitação de orçamentos e gestão de atendimentos.
 
- 
-• Pesquisar aplicações web com objetivos similares  
-Investigar características do design e funcionalidades de aplicações web semelhantes ao tema do projeto. 
+### Específicos
+
+• Estruturar uma plataforma digital que permita o cadastro de profissionais e a divulgação organizada de seus serviços e portfólios.
+
+• Implementar um sistema de solicitação de orçamentos online, permitindo que clientes enviem demandas de forma padronizada e centralizada.
+
+• Desenvolver um painel de gerenciamento para que profissionais acompanhem solicitações recebidas, status de atendimentos e histórico de serviços.
+
+• Organizar categorias e subcategorias de serviços, facilitando a busca e a identificação de profissionais por área de atuação.
+
+• Aplicar conceitos e tecnologias aprendidas no curso de Desenvolvimento de Software Multiplataforma na construção de uma solução funcional, responsiva e escalável.
 
 ### Metodologia
-Ao desenvolver a aplicação web de Protocolo Rural, serão utilizadas diversas ferramentas e tecnologias apresentadas no curso de Desenvolvimento de Software Multiplataforma (DSM), integrando conceitos abordados ao longo das aulas. Algumas dessas ferramentas incluem tecnologias de desenvolvimento front-end e back-end, além de metodologias de engenharia de software. 
 
- 
+O desenvolvimento da aplicação será realizado com base nos conceitos e práticas aprendidos ao longo do curso de Desenvolvimento de Software Multiplataforma (DSM). O projeto envolve a criação de uma plataforma web que integra interface visual, lógica de funcionamento e armazenamento de dados, possibilitando o gerenciamento de usuários, serviços e solicitações de orçamento.
 
-### Linguagens de Programação 
-Determinadas linguagens de programação serão necessárias na criação do projeto, especificamente HTML5, CSS3 e JavaScript, com o intuito de se construir uma interface estática que possui estrutura interativa e responsiva. 
+Inicialmente, serão levantados os requisitos do sistema e definidos os principais fluxos de uso da plataforma. Em seguida, será elaborado um protótipo das telas para validação da experiência do usuário.
 
- 
+### Linguagens de Programação
 
-### Frameworks 
-A utilização do framework CSS chamado bootstrap permite agilizar o desenvolvimento front-end e garantir consistência visual em toda a aplicação. 
+Para o desenvolvimento da aplicação serão utilizadas tecnologias voltadas à construção de aplicações web modernas.
 
-### Prototipagem  
-A plataforma de design e criação de interfaces Figma possibilitará a concepção de protótipos das telas do projeto permitindo visualizar modelos experimentais da aplicação web. 
+O JavaScript será utilizado tanto no front-end quanto no back-end do sistema. No lado do cliente, será utilizada a biblioteca React, responsável pela criação da interface da plataforma, permitindo o desenvolvimento de páginas dinâmicas organizadas em componentes reutilizáveis.
 
-### Metodologia Scrum 
-Este projeto integrador utilizará o modelo Scrum, devido à sua estrutura ágil e iterativa, que permite o trabalho com ciclos curtos de desenvolvimento (Sprints) que habilitando inspeção e adaptação contínuas, otimizando recursos e garantindo alinhamento frequente com as necessidades do projeto.   
+No lado do servidor, será utilizado o Node.js, responsável por processar requisições da aplicação e realizar a comunicação com o banco de dados.
+
+Para o armazenamento das informações será utilizado o mySQL, um banco de dados NoSQL que permite gerenciar dados de usuários, serviços e solicitações de orçamento de forma flexível e eficiente.
+
+### Frameworks
+
+Para auxiliar no desenvolvimento da interface da aplicação será utilizado o Tailwind CSS, um framework de estilização que facilita a criação de layouts modernos, responsivos e visualmente consistentes. Seu uso permite maior agilidade no desenvolvimento do front-end e melhor organização dos estilos utilizados na aplicação.
+
+### Prototipagem
+
+A plataforma de design e criação de interfaces Figma possibilitará a concepção de protótipos das telas do projeto permitindo visualizar modelos experimentais da aplicação web.
+
+### Metodologia Scrum
+
+Para o desenvolvimento do projeto será utilizada a metodologia ágil Scrum, que organiza o processo de desenvolvimento em ciclos curtos chamados Sprints. Cada Sprint corresponde a um período de trabalho no qual determinadas funcionalidades do sistema são planejadas, desenvolvidas e avaliadas.
 
 # 2. Requisitos
-O documento de requisitos de uma aplicação é um fator fundamental para seu desenvolvimento, pois permite catalogar e compreender quais características são essenciais para o sistema a ser desenvolvido com base nas funcionalidades e restrições propostas pelo cliente, assim possibilitando a entrega de um produto padronizado e satisfatório conforme as especificações solicitadas. 
 
-### Histórias do usuário 
-• Como usuário não cadastrado, quero poder acessar a sessão "Sobre" do site para que eu possa entender como funciona. 
+O documento de requisitos de uma aplicação é um fator fundamental para seu desenvolvimento, pois permite catalogar e compreender quais características são essenciais para o sistema a ser desenvolvido com base nas funcionalidades e restrições propostas pelo cliente, assim possibilitando a entrega de um produto padronizado e satisfatório conforme as especificações solicitadas.
 
-• Como usuário não cadastrado, eu quero poder acessar a sessão "Contato" do site para me comunicar com os desenvolvedores. 
+### Histórias do usuário
 
-• Como usuário não cadastrado, eu quero poder acessar a página "Quem somos” para saber mais sobre os desenvolvedores do projeto. 
+• Como usuário não cadastrado, quero poder acessar a página inicial do site para que eu possa entender do que se trata.
 
-• Como usuário não cadastrado, eu quero poder acessar a sessão “Cadastro” do site para me cadastrar na plataforma. 
+• Como usuário não cadastrado, quero poder visualizar os profissionais e seus serviços na plataforma para que eu entenda os tipos de serviços oferecidos.
 
-• Como usuário cadastrado eu quero poder acessar a sessão "Configurações" para mudar minhas informações de conta. 
+• Como usuário não cadastrado, quero poder acessar a sessão "Cadastro" do site para me cadastrar na plataforma.
 
-• Como usuário cadastrado, eu quero poder realizar uma avaliação para entender o grau de sustentabilidade da minha propriedade rural. 
+• Como usuário cadastrado, quero poder fazer login na plataforma para acessar minha conta.
 
-• Como usuário cadastrado eu quero poder receber um aviso para me alertar caso eu não preencha todos os indicadores do formulário. 
+• Como usuário cadastrado, quero poder editar minhas informações de perfil para manter meus dados atualizados.
 
-• Como usuário cadastrado, eu quero poder ver os resultados da minha avalição em gráficos para que eu possa entender melhor a sustentabilidade da minha propriedade rural. 
+• Como cliente cadastrado, quero poder buscar profissionais para encontrar prestadores de serviços.
 
-• Como usuário cadastrado, eu quero poder acessar o meu histórico de avalições para possíveis comparações. 
+• Como cliente cadastrado, quero poder solicitar um orçamento para um profissional.
 
-• Como administrador eu quero poder acessar a sessão "Cadastrar indicador" para criar um novo indicador. 
+• Como cliente cadastrado, quero poder agendar um serviço com um profissional.
 
-• Como administrador eu quero poder excluir um indicador, para remover os indicadores que não forem mais relevantes. 
+• Como cliente cadastrado, quero poder visualizar o histórico de serviços realizados para acompanhar meus atendimentos anteriores.
 
-• Como administrador eu quero poder editar um indicador, para alterá-lo caso necessário. 
+• Como profissional cadastrado, quero poder criar e gerenciar meu perfil profissional para apresentar meus serviços aos clientes.
 
-• Como administrador eu quero poder desativar ou ativar um indicador para deixar avaliações condizentes com as condições atuais. 
+• Como profissional cadastrado, quero poder receber solicitações de orçamento para responder aos clientes interessados.
+
+• Como profissional cadastrado, quero poder gerenciar meus agendamentos para organizar meus serviços.
+
+• Como profissional cadastrado, quero poder visualizar o histórico de serviços realizados para acompanhar meus atendimentos.
 
 ## • Requisitos funcionais
-Os requisitos funcionais de uma aplicação são especificações definidas na etapa de elicitação do software, que ocorre durante o levantamento de requisitos. Seu propósito é fornecer à equipe de desenvolvimento as características especificas, restrições e funcionalidades que o sistema possui durante certas circunstâncias, estabelecendo assim as bases para o desenvolvimento de um produto que atende as necessidades do cliente. 
 
+Os requisitos funcionais de uma aplicação são especificações definidas na etapa de elicitação do software, que ocorre durante o levantamento de requisitos. Seu propósito é fornecer à equipe de desenvolvimento as características especificas, restrições e funcionalidades que o sistema possui durante certas circunstâncias, estabelecendo assim as bases para o desenvolvimento de um produto que atende as necessidades do cliente.
 
+### Usuários não cadastrados
 
-### Usuários Não Cadastrados 
+#### RF 1 - Mostrar página inicial
 
+Exibir página inicial do sistema com informações gerais e os serviços oferecidos.
 
-#### RF 1 – Mostrar página sobre o site 
-Apresentar uma página com informações sobre a aplicação web, como sua descrição, objetivos e sobre os desenvolvedores. 
+#### RF 2 - Visualizar profissionais
 
- 
-#### RF 2 – Mostrar página quem somos 
-Desenvolver uma página sobre quem são os desenvolvedores do projeto, incluindo links para seus respectivos LinkedIn e GitHub. 
+Permitir que usuários não cadastrados possam visualizar profissionais disponíveis no sistema.
 
- 
-#### RF 3 – Exibir página contato 
-Implementar a página contato onde o usuário poderá enviar uma mensagem preenchendo seu e-mail, assunto e mensagem para se comunicar com os desenvolvedores do projeto. 
+#### RF 3 - Cadastrar usuários
 
- 
-#### RF 4 – Cadastrar usuário 
-Possibilitar que o usuário crie uma conta ao fornecer dados básicos com o intuito de salvar suas avaliações. 
+Permitir que usuários possam se cadastrar ao fornecer dados pessoais como nome, e-mail, telefone, e CNPJ no caso de profissionais.
 
- 
+### Usuários Cadastrados
 
-### Usuários Cadastrados 
+#### RF 4 - Realizar login
 
+Permitir que o usuário acesse sua conta informando e-mail e senha previamente cadastrados.
 
-#### RF 5 – Acessar o sistema 
-Permitir que o usuário entre no sistema fornecendo seus dados previamente cadastrados, e-mail e senha para gerenciar dados de seu perfil, visualizar seu histórico de avaliações e realizar login e logout do sistema. 
+#### RF 5 - Editar perfil
 
+Permitir que o usuário altere suas informações de perfil.
 
-#### RF 6 – Editar perfil 
-Permitir que o usuário cadastrado possa editar todos os seus dados, como e-mail, nome de usuário, telefone e senha. 
+### Usuários Cadastrados(Clientes)
 
- 
-#### RF 7 – Realizar avaliação 
-Proporcionar ao usuário um formulário com todos os indicadores de sustentabilidade, onde poderá realizar o preenchimento, respondendo cada um dos indicadores ao selecionar a categoria em que a situação de sua propriedade rural se enquadra. 
+#### RF 6 - Buscar profissionais
 
- 
-#### RF 8 – Validar o preenchimento do questionário 
-Verificar se todos os indicadores da avaliação foram completamente preenchidos antes de mostrar o resultado ao usuário, caso contrário, o sistema mostrará um aviso. 
+Permitir que o usuário busque profissionais disponíveis no sistema.
 
- 
-#### RF 9 – Apresentar resultados 
-Exibir os resultados da avaliação ao ser concluída, calculando as pontuações de cada um dos indicadores de sustentabilidade e mostrando uma porcentagem que representa o grau de sustentabilidade daquela propriedade. 
+#### RF 7 - Visualizar perfil do profissional
 
- 
-#### RF 10 – Gerar gráfico 
-Mostrar gráficos que representem o grau de sustentabilidade e outro que representa o resultado da avaliação por indicador. 
+Permitir que o usuário visualize o perfil do profissional, incluindo descrição e serviços oferecidos.
 
- 
-#### RF 11 – Arquivar resultados 
-Proporcionar ao usuário cadastrado o armazenamento de avaliações anteriores com seus respectivos resultados para comparações futuras. 
+#### RF 8 - Solicitar Orçamento
 
- 
-#### RF 12 – Exibir histórico de avaliações 
-Disponibilizar ao usuário o acesso ao histórico completo de suas avaliações passadas onde ele poderá visualizar a data, as notas referentes a cada indicador e o grau de sustentabilidade, possibilitando a comparação dos resultados anteriores. 
+Permitir que o usuário envie uma solicitação de orçamento ao profissional informando detalhes do serviço desejado.
 
- 
+#### RF 9 - Agendar Serviço
 
-### Administradores 
+Permitir que o usuário agende o serviço após a aprovação do orçamento.
 
+#### RF 10 - Visualizar histórico de serviços
 
-#### RF 12 – Cadastrar indicador 
-Conceder ao administrador a capacidade de criar indicadores de sustentabilidade, informando nome e descrição, para que possam ser utilizados nas avaliações. 
+Permitir que o usuário visualize o histórico de serviços solicitados, incluindo data, valores e status do serviço.
 
- 
+### Usuários Cadastrados(Profissionais)
 
-#### RF 13 – Excluir indicador 
-Permitir que o administrador exclua indicadores que não são mais relevantes ou necessários para as avaliações. 
+#### RF 11 - Criar perfil profissional
 
- 
+Permitir que o profissional configure seu perfil profissional.
 
-#### RF 14 – Editar indicador 
-Oferecer ao administrador a opção de modificar indicadores existentes para ajustá-los conforme necessário. 
+#### RF 12 - Cadastrar serviços
 
- 
+Permitir que o usuário cadastre os serviços oferecidos na plataforma.
 
-#### RF 15 – Ativar/desativar indicador 
-Habilitar o administrador a ativar ou desativar indicadores, permitindo ajustes nas avaliações de acordo com as condições atuais ou mudanças nas diretrizes. 
+#### RF 13 - Gerenciar solicitações de orçamento
 
+Permitir que o profissional visualize e responda solicitações de orçamento.
 
+#### RF 14 - Enviar orçamento
+
+Permitir que o usuário envie um valor estimado do serviço com base nos dados oferecidos pelo cliente na solicitação de orçamento.
+
+#### RF 15 - Gerenciar agendamentos
+
+Permitir que o profissional possa visualizar e gerenciar os serviços agendados.
+
+#### RF 16 - Visualizar histórico de serviços
+
+Permitir que o profissional visualize serviços concluídos e seus respectivos valores.
 
 ## • Requisitos não funcionais
-Os requisitos não funcionais referem-se aos aspectos do sistema que garantem sua qualidade. 
 
- 
- #### RNF 1 – Usabilidade 
- A aplicação deve ser fácil de entender e usar, com uma interface limpa e formulários diretos, com explicações claras dos indicadores, para que diferentes tipos de usuários possam navegar sem problemas. 
+Os requisitos não funcionais referem-se aos aspectos do sistema que garantem sua qualidade.
 
- 
- #### RNF 2 – Desempenho 
- O sistema deve responder de forma rápida, garantindo que os usuários possam ver os resultados sem demora, especialmente em áreas rurais com conexão mais fraca. 
+#### RNF 1 - Usabilidade
 
- 
- #### RFN 3 – Acessibilidade 
- O sistema deve ser acessível para todos os tipos de usuários, incluindo aqueles com necessidades especiais. 
+O sistema deve possuir uma interface simples e intuitiva, permitindo que clientes e profissionais tenham facilidade para navegar e utilizem as funcionalidades oferecidas sem dificuldades.
 
- 
-#### RFN 4 – Compatibilidade 
-O sistema deve funcionar uniformemente em diferentes navegadores e dispositivos, móveis ou desktop. 
+#### RNF 2 - Desempenho
+
+O sistema deve apresentar respostas rápidas as ações dos usuários, como busca de profissionais, envio de orçamentos e carregamento de páginas.
+
+#### RNF 3 - Segurança
+
+O sistema deve garantir a proteção das informações do usuário.
+
+#### RNF 4 - Compatibilidade
+
+A aplicação deve funcionar em diferentes dispositivos e navegadores.
+
+#### RNF 5 - Disponibilidade
+
+O sistema deve estar disponível para acesso dos usuários na maior parte do tempo.
 
 # 3. Modelo de casos de uso
-O diagrama de casos de uso, serve de representação visual que mostra as funcionalidades principais de um sistema. Ele descreve as interações entre os atores (usuários) e o sistema por meio de "casos de uso", que são ações ou serviços oferecidos. 
 
-![Preview][cdu]
+O diagrama de casos de uso serve de representação visual para mostrar as funcionalidades principais de um sistema. Ele descreve as interações entre os atores (usuários) e o sistema por meio de "casos de uso", que são ações ou serviços oferecidos.
 
-### CASOS DE USO RESUMIDOS
-
-Caso de Uso: Entrar em contato
-Atores envolvidos: Usuário.
-Visão geral: O usuário acessa a página de contato da plataforma e preenche os campos: nome, assunto, mensagem e e-mail. Após fornecer essas informações o usuário clica no botão "enviar" e a mensagem é encaminhada para o administrador.
-
-Caso de Uso: Cadastrar no sistema
-Atores envolvidos: Usuário.
-Visão geral: O usuário entra no sistema e clica no botão "Acessar", localizado no canto superior direito da página inicial, são exibidas as opções para login e cadastro. O usuário se ainda não cadastrado, clica na opção "Cadastrar-se" e é redirecionado para uma página onde deve fornecer seus dados pessoais, após preencher seus dados, o usuário se cadastra e sua conta é criada no sistema.
-
-Caso de Uso: Realizar login
-Atores envolvidos: Usuário, Administrador.
-Visão geral: O usuário acessa a plataforma e clica no botão "Acessar" localizado no canto superior direito da tela, em seguida, preenche os campos "e-mail" e "senha" com os dados cadastrados, e clica no botão "Entrar", sendo logado no sistema.
-
-Caso de Uso: Gerenciar indicadores
-Atores envolvidos: Administrador.
-Visão geral: O administrador acessa o sistema e tem a permissão para adicionar ou remover indicadores se necessário.
-
-### CASOS DE USO DETALHADO
-Caso de uso detalhado: Realizar avaliação
-Ator 1: Usuário (Proprietário Rural).
-
-#### Pré-Condições
-O usuário deve ter uma conta cadastrada e estar logado no sistema.
-
-#### Fluxo Principal (Sucesso):
-1.	Preenchimento do nome da avalição
-O usuário preenche o campo de nome para dar um nome à sua avaliação.
-2.	Preenchimento do formulário de indicadores
-O usuário responde as questões do formulário, selecionando as opções que mais condizem com a realidade de sua propriedade.
-3.	Validação do formulário
-O sistema verifica se todas as questões foram devidamente respondidas.
-4.	Finalização da avaliação
-O usuário clica no botão "Finalizar", para finalizar sua avaliação.
-5.	Apresentação dos resultados
-Os resultados são armazenados e exibidos no painel de avaliações, em formato de notas, porcentagem e gráficos.
-
-#### Fluxo Alternativo:
-1.	Formulário não é preenchido totalmente 
-O usuário não consegue dar continuidade na sua avaliação enquanto não responder à questão que falta.
-
-#### Pós Condições: 
-A avaliação é finalizada e seus resultados são armazenados e ficam disponíveis para visualização no painel de avaliações.
+![Preview][uscs]
 
 # 4. Banco de Dados
-O banco de dados foi desenvolvido de acordo com as necessidades da aplicação, garantindo que as informações fossem armazenadas de forma flexível e adequada ao tipo de dados trabalhado.
-
-Foi utilizado o MongoDB como sistema de banco de dados NoSQL por oferecer alta flexibilidade na modelagem e boa performance para grandes volumes de dados, o que se integra facilmente com aplicações modernas.
-
-A criação e gestão do banco foram realizadas utilizando o MongoDB Compass. Essa ferramenta facilita a visualização dos documentos, a criação de coleções, a execução de consultas utilizando a sintaxe do MongoDB e o acompanhamento do funcionamento geral do banco. Elas foram essenciais para controlar a estrutura dos dados.
 
 # 5. Diagrama de classes
-O diagrama de classe é uma representação visual da estrutura de um sistema orientado a objetos.
-
-![Preview][ddc]
-
 
 # 6. Estudo de viabilidade
-O estudo de viabilidade é uma avaliação preliminar que determina se um projeto é possível de ser executado através da examinação de aspectos técnicos, econômicos, legais e operacionais para identificar potenciais obstáculos antes do início do projeto e se ele é viável ou não.
+
+O estudo de viabilidade é uma análise realizada para determinar se um projeto é ou não viavel. Para isso, são considerados aspectos técnicos, financeiros, de mercado e operacionais, buscando identificar dificuldades antes do inicio do desenvolvimento.
 
 ### VIABILIDADE TÉCNICA
-A viabilidade técnica avalia se um projeto pode ser implementado com as tecnologias e recursos disponíveis, examinando se a equipe possui as habilidades técnicas necessárias e se a infraestrutura existente suporta os requisitos do sistema proposto. No caso do Protocolo Rural, o projeto está sendo desenvolvido por alunos capacitados do curso de Desenvolvimento de Software Multiplataforma, utilizando tecnologias como HTML, CSS, JavaScript e PHP. Além disso, são empregadas plataformas como o GitHub, para controle de versão, e o Figma, para a prototipação das interfaces.
 
-###	VIABILIDADE FINANCEIRA
-Através do estudo da viabilidade financeira, é possível examinar os aspectos econômicos do projeto, analisando custos de desenvolvimento, implementação e manutenção em relação aos potenciais retornos financeiros. Este estudo determina se o projeto é economicamente sustentável e se há recursos suficientes para sua execução e continuidade.
-O projeto é feito por estudantes com o intuito de disponibilizar uma aplicação completamente gratuita, sem qualquer fim lucrativo ou monetização, assim não sendo necessário um estudo aprofundado sobre a viabilidade financeira do projeto, pois a longo prazo, não haverá retorno ou lucros.
+Através da viabilidade técnica é possivel identificar se um projeto pode ser desenvolvido com as tecnologias e conhecimentos disponiveis pela equipe responsável, verificando as ferramentas utilizadas, infraestrutura necessária e a capacidade técnica dos desenvolvedores.
 
-###	VIABILIDADE MERCADO
-A viabilidade de mercado avalia se existe demanda suficiente para o produto ou serviço, analisando o público-alvo, a concorrência e o potencial de aceitação no mercado. Envolve a identificação de necessidades não atendidas e oportunidades disponíveis no segmento de mercado escolhido. 
-A aplicação atende a uma demanda crescente no setor agropecuário: a necessidade de uma ferramenta que facilite o monitoramento e a melhoria da sustentabilidade em uma propriedade rural. O Protocolo Rural propõe uma alternativa intuitiva, gratuita e de fácil utilização, tornando o processo mais eficiente para os proprietários rurais da região do centro-oeste paulista.
+No caso deste projeto, a equipe é formada por alunos do curso de Desenvolvimento de Software Multiplataforma, que possuem o conhecimento técnico necessário para dar suporte ao projeto, utilizando tecnologias como React, Node.js e JavaScript, além disso, serão utilizadas as plataformas GitHub para controle de versão e Figma para prototipação.
 
-###	VIABILIDADE OPERACIONAL
-A viabilidade operacional analisa se um projeto pode ser executado de forma prática e eficiente, levando em conta os recursos humanos, o ambiente de uso e a aceitação do sistema pelos usuários finais. 
-Do ponto de vista operacional, o projeto é plenamente viável. A plataforma foi pensada para ser funcional tanto em computadores quanto em dispositivos móveis, considerando o público-alvo que pode acessar o sistema em regiões com conexão limitada. A interface foi desenhada com foco em simplicidade, clareza e acessibilidade, o que facilita seu uso mesmo por usuários com pouca familiaridade com tecnologia.
+### VIABILIDADE FINANCEIRA
 
-###	CONCLUSÃO
-O estudo de viabilidade do Protocolo Rural mostra que o projeto é realizável sob aspectos financeiros, operacionais e técnicos. 
-Mesmo sendo um projeto sem fins lucrativos, os custos são reduzidos, e sua execução se mostra sustentável no contexto acadêmico. Além disso, há uma demanda concreta no setor agropecuário por soluções que facilitem o monitoramento da sustentabilidade rural.
+A viabilidade financeira analisa os custos envolvidos no desenvolvimento e na implementação e manutenção do projeto, além de considerar possíveis formas de retorno financeiro.
 
+Os custos de desenvolvimento para este projeto são reduzidos, pois o sistema será desenvolvido por estudantes utilizando ferramentas gratuitas.
+Dessa forma, considerando o baixo custo de desenvolvimento, o projeto apresenta viabilidade financeira dentro do contexto proposto.
+
+### VIABILIDADE DE MERCADO
+
+A viabilidade de mercado analisa se existe demanda para o projeto proposto, considerando o público alvo, diferencial da solução e as necessidades existentes no mercado.
+Na área da construção civil e de serviços manuais, é comum que profissionais autônomos ou pequenas empresas tenham dificuldade em divulgar seus serviços e alcançar novos clientes, ao mesmo tempo, clientes interessados nesses serviços muitas vezes podem ter dificuldades para encontrar profissionais confiáveis e comparar diferentes opções disponíveis.
+
+A proposta deste projeto é funcionar como um marketplace digital, intuitivo e eficiente para que profissionais apresentem seus serviços enquanto clientes podem buscar prestadores, solicitar orçamentos e agendar serviços de forma prática.
+Assim, é entendido que existe uma oportunidade de mercado para este sistema.
+
+### VIABILIDADE OPERACIONAL
+
+A viabilidade operacional identifica se o sistema pode ser utilizado de forma prática pelos usuários finais, considerando a facilidade de uso do sistema e adaptação ao contexto que sera aplicado.
+
+A plataforma foi idealizada para ser acessível por meio de navegadores web, podendo ser utilizada tanto em computadores como em dispositivos móveis. A interface tem como objetivo a simplicidade e clareza nas informações, permitindo que tanto profissionais e clientes possam usar o sistema sem grandes dificuldades.
+Essas características tornam o sistema operacionalmente viável e adequado para o público alvo.
+
+### CONCLUSÃO
+
+Com base na análise realizada, podemos concluir que o projeto apresenta viabilidade técnica, financeira, de mercado e operacional dentro do contexto que será desenvolvido. As tecnologias necessárias para o desenvolvimento são acessíveis e dominadas pela equipe, os custos são reduzidos e existe potencial para aplicação da proposta para facilitar a conexão entre clientes e profissionais na área da construção civil.
+
+O projeto se mostra viável para desenvolvimento e implementação como uma solução prática para intermediar a relação entre clientes e profissionais prestadores de serviços.
 
 # 7. Regras de negócio (Modelo canvas)
-![Preview][mdn]
 
-###	O QUE SERÁ REALIZADO?
- __Proposta de Valor__
+![preview][mdn]
 
-Uma aplicação web que será uma ferramenta prática e estruturada, de fácil usabilidade e acesso, capaz de avaliar as condições de sustentabilidade, baseando-se em diversas áreas (indicadores) que contribuem para o bom funcionamento do agroecossistema de uma propriedade rural.
+### O QUE SERÁ REALIZADO?
+
+**Proposta de Valor**
+
+Uma aplicação web que funciona como uma plataforma prática e acessível, conectando clientes a profissionais da área da construção civil. O sistema permite a busca, seleção e contratação de serviços como reformas, manutenção e obras, oferecendo avaliações, facilidade de uso e maior segurança na escolha de profissionais qualificados.
 
 ### COMO SERÁ REALIZADO?
-__Parcerias-Chave__
 
-Faculdade de Tecnologia de Jahu (FATEC Jahu).
+**Parcerias-Chave**
 
-__Atividades-Chave__
+Profissionais autônomos da construção civil e lojas de materiais de construção (opcional).
 
-Desenvolver uma plataforma que proporciona um questionário de fácil acesso que visa identificar as condições de propriedades rurais. O sistema permite a elaboração estruturada da avaliação através de indicadores específicos que fornecem ao usuário uma porcentagem de sustentabilidade. Além disso a plataforma contará com manutenção, garantindo um bom funcionamento do sistema.
+**Atividades-Chave**
 
-__Recursos-Chave__
+Desenvolver uma plataforma digital que permite o cadastro de clientes e profissionais. O sistema possibilita a busca por serviços, visualização de perfis, solicitação de atendimentos e avaliação dos profissionais. Além disso, haverá manutenção contínua da aplicação para garantir desempenho, segurança e boa experiência do usuário.
 
-Tempo e dedicação da equipe, junto com a documentação do sistema e       ferramentas para desenvolver o projeto.
+**Recursos-Chave**
+
+Tempo e dedicação da equipe, documentação do sistema, ferramentas de desenvolvimento, banco de dados e infraestrutura para hospedagem da aplicação.
 
 ### PARA QUEM SERÁ REALIZADO?
-__Relacionamento com Clientes__
 
-Contato por Email e feedback dos clientes.
+**Relacionamento com Clientes**
 
-__Canais de Distribuição__
+Contato via e-mail ou plataforma, sistema de avaliações e feedback dos usuários, além de notificações sobre solicitações e serviços.
 
-O projeto estará disponível na nossa aplicação, nas redes moveis e redes sociais, e através de instituições de ensino.
+**Canais de Distribuição**
 
-__Segmento de Clientes__
+A plataforma estará disponível via aplicação web, podendo ser acessada por dispositivos móveis, além de divulgação em redes sociais e instituições de ensino.
 
-Proprietários rurais, estudantes, pesquisadores, empresas agrícolas, órgãos ambientais entre outros membros da sociedade.
+**Segmento de Clientes**
 
-###	QUANTO CUSTARÁ?
-__Estrutura de Custos__
+Pessoas que necessitam de serviços domésticos ou reformas, proprietários de imóveis, pequenos negócios e profissionais autônomos da construção civil.
 
-Desenvolvimento e manutenção da aplicação web, hospedagem, tempo e suporte. 
+### QUANTO CUSTARÁ?
 
-__Fontes de Receita__
+**Estrutura de Custos**
 
-Projeto sem fins lucrativos, focado em desenvolver uma aplicação web para ajudar a avaliar a sustentabilidade de propriedades rurais, assim contribuindo para boas práticas ambientais.
+Desenvolvimento e manutenção da aplicação web, hospedagem, tempo da equipe, suporte ao usuário e possíveis custos com divulgação.
 
+**Fontes de Receita**
+
+O projeto pode ser inicialmente sem fins lucrativos, com possibilidade futura de monetização através de comissão por serviços realizados, planos para profissionais ou destaque de perfis dentro da plataforma.
 
 # 8. Design
 
-### Paleta de Cor
-As cores escolhidas para o projeto foram selecionadas através de um esquema de cores análogas, uma combinação de três cores próximas uma da outra em um círculo cromático. 
-A paleta do projeto tem o intuito de representar a transição ambiental entre os biomas da mata atlântica e cerrado, que se caracterizam por seus tons de verdes e amarelos.
-
-![Preview][pdc]
-
-### Tipografia
-Para o projeto, foi escolhida a fonte Open Sans, uma tipografia sem serifa que se destaca pela sua incrível versatilidade. Além de oferecer ótima legibilidade em diferentes aparelhos, desde desktops até dispositivos moveis, ela mantém sua clareza e definição tanto em meios digitais quanto impressos.
-
-![Preview][fnt]
-
-### Logo
-O tipo de logo escolhido foi o Isotipo, misturando a tipografia Open Sans, uma fonte moderna e simples. Já o símbolo foi elaborado para representar o equilíbrio entre sustentabilidade e o agronegócio.
-
-![Preview][lg]
-
-### Wireframe
-O wireframe serve como uma base para como uma estrutura inicial da aplicação Protocolo Rural poderia se parecer. 
-Atualmente ela se localiza no link à baixo:
-
-[Wireframe Protocolo Rural](https://www.figma.com/design/pcAL45RIRkzJonJIfegYL8/Wireframe---Protocolo-Rural?node-id=0-1&t=fn86gsElgTURtnbu-1 "hover text")
-
 # 9. Personas
-![Preview][prsn]
-
-
-
-
-![Preview][prsn2]
-
 
 # 10. Protótipo
-O protótipo do projeto foi criado através da plataforma de design e prototipagem Figma. O link segue logo à baixo.
-
-[Protótipo Protocolo Rural](https://www.figma.com/design/oWrjSVdJYFZ6AjlZ1ABUgw/Prot%C3%B3tipo---Protocolo-Rural?node-id=0-1&t=aeE2ZFcHH2HeqOoj-1 "hover text")
-
 
 # 11. Aplicação
-A página para o GitHub do projeto se encontra no link abaixo:
-
-[Aplicação Protocolo Rural](https://github.com/leobalbino2/Protocolo-Rural-III-Semestre "hover text")
-
 
 # 12. Considerações Finais
-O terceiro semestre do projeto trouxe desafios que influenciaram diretamente esta etapa. Um dos principais pontos foi a necessidade de ampliar nosso conhecimento técnico em todas as partes do sistema, especialmente no desenvolvimento em C#. Além disso, enfrentamos a falta de tempo necessário para concluir todas as funcionalidades planejadas.
-
-Mesmo com essas dificuldades, conseguimos entregar uma versão funcional que atende aos objetivos centrais definidos para o semestre. Os resultados foram satisfatórios, embora a equipe reconheça que ainda há espaço para melhorias e ajustes. Continuamos motivados a avançar no projeto, buscando torná-lo mais completo e fiel à proposta original.
 
 # 13. Referências
-MATTESON, Steve. Open Sans. Disponível em: https://fonts.google.com/specimen/Open+Sans. Acessado em: 12 de novembro de 2024
 
- 
-PIERI, Lucas Vinicius de. Indicadores de sustentabilidade rural no ecótono do Centro-Oeste paulista. 2018. 64 f. Trabalho de Conclusão de Curso (Curso de Meio Ambiente) – Faculdade de Tecnologia de Jahu, Jahu, 2018.  
-
- 
-TRELLO. Plataforma de gestão de projetos e colaboração. Disponível em: https://trello.com/home. Acessado em: 04 de novembro de 2024 
-
- 
-FIGMA. Plataforma de design colaborativo online. Disponível em: https://www.figma.com/. Acessado em: 07 de novembro de 2024. 
-
- 
-BOOTSTRAP. Framework CSS para desenvolvimento front-end responsivo. Disponível em: https://getbootstrap.com/. Acessado em: 25 de novembro de 2024. 
-
- 
-
-GITHUB. Plataforma de hospedagem de código-fonte e controle de versão. Disponível em: https://github.com/. Acessado em: 25 de novembro de 2024. 
-
- 
-GRID. Calculador de grid responsivo. Disponível em: http://gridcalculator.dk/. Acessado em: 12 de novembro de 2024. 
-
-
-AELA CONTENTS. Grids: como usar esse sistema para designs responsivos ?. Disponível em: https://medium.com/aela/grids-como-usar-esse-sistema-para-designs-responsivos-c6b3dd1c0383. Acessado em: 12 de novembro de 2024. 
-
- 
-SOUSA, Rafaela. Sustentabilidade. Disponível em: https://brasilescola.uol.com.br/educacao/sustentabilidade.htm. Acessado em: 09 de novembro de 2024. 
-
- 
-FERREIRA, José Mário Lobo; VIANA, João Herbert Moreira; COSTA, Adriana Monteiro da; SOUSA, Daniel Vieira de; FONTES, Andréia Aline. ISA (Indicadores de Sustentabilidade em Agroecossistemas). Disponível em: https://www.epamig.br/wp-content/uploads/2023/03/art2-ia271.pdf. Acessado em 10 de novembro de 2024. 
-
- 
-DRAW.IO. Plataforma online para criação de diagramas de forma simples e colaborativa. Disponível em: https://app.diagrams.net. Acessado em: 29 de abril de 2025. 
-
- 
-CHART.JS. Biblioteca JavaScript de código aberto para criação de gráficos interativos e responsivos. Disponível em: https://www.chartjs.org. Acessado em: 19 de maio de 2025. 
-
- 
-
-[cdu]: imgs/casodeuso.jfif
-[ddc]: imgs/diagramaclasse.jpeg
-[lg]: imgs/logo.jpeg
-[mdn]: imgs/modelonegocios.jpeg
-[pdc]: imgs/paleta.jpeg
-[fnt]: imgs/fonte.jpeg
-[prsn]: imgs/persona.jpeg
-[prsn2]: imgs/personaSecundaria.jpeg
-
-
+[uscs]: imgs/usecasee.png
+[mdn]: imgs/modelodenegocios.png
